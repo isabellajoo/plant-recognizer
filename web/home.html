@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
         <title>Plant Recognizer</title>
+        <link rel="stylesheet" href="home.css">
     </head>
     <body>
         <!-- logo -->
-        <img src="./data/image/logo_temp.png" alt=""/>
-        <h1>PLANT RECOGNIZER</h1>
+        <img id="logo-img" class="center" src="./data/image/logo_temp.png" alt=""/>
+        <h1 id="logo-txt" class="center">PLANT RECOGNIZER</h1>
         <!-- image upload area-->
-        <img src="./data/image/add_image_temp.png" alt=""/>
-        <h3>검색할 식물의 사진을 올려놓거나 눌러서 업로드하세요</h3>
+        <div id="image-upload" class="center">
+            <img id="add-img" src="./data/image/add_image_temp.png" alt=""/>
+            <h2 id="add-txt">검색할 식물의 사진을 올려놓거나 눌러서 업로드하세요</h2>
+        </div>
+
         <!-- after image uploading, select detail area to search -->
-        <div id="modal">
+        <div id="modal" class="modal">
             <h2>검색할 영역을 선택하세요</h2>
             <button type="button">취소</button>
             <button type="button">완료</button>
