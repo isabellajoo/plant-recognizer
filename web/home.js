@@ -1,20 +1,21 @@
 window.onload = function() {
+    var blur = document.getElementById("blur");
     var modal = document.getElementById("modal");
-    var btn = document.getElementById("add-img");
-    var span = document.getElementsByClassName("close")[0];
 
-    btn.onclick = function() {
-        modal.style.display = "block";
-        console.log("btn.onclick");
+    blur.onclick = function() {
+        blur.classList.toggle("active");
+        modal.classList.toggle("active");
     }
 
-    span.onclick = function() {
-        modal.style.display = "none";
+    modal.onclick = function() {
+        blur.classList.toggle("active");
+        modal.classList.toggle("active");
     }
 
     window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+        if (event.target === modal) {
+            blur.classList.toggle("active");
+            modal.classList.toggle("active");
         }
     }
 }
