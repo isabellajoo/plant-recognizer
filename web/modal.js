@@ -1,21 +1,26 @@
 window.onload = function() {
+    var imgupload = document.getElementById("img-upload");
     var blur = document.getElementById("blur");
     var modal = document.getElementById("modal");
+    var cancel = document.getElementById("cancel");
 
-    blur.onclick = function() {
+    imgupload.onclick = function() {
         blur.classList.toggle("active");
         modal.classList.toggle("active");
     }
 
-    modal.onclick = function() {
+    cancel.onclick = function() {
         blur.classList.toggle("active");
         modal.classList.toggle("active");
     }
 
+    /*
     window.onclick = function(event) {
-        if (event.target === modal) {
+        if (event.target === blur) {
+            console.log('windowOk');
             blur.classList.toggle("active");
             modal.classList.toggle("active");
         }
     }
+     */
 }

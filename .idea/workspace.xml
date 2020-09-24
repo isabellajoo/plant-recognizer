@@ -21,7 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="30fc2966-7ef6-436d-a304-28db03633308" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/modal.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +32,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="ProjectId" id="1hm7Ad07lvfqyI3y1IATPF9VdDL" />
   <component name="ProjectLevelVcsManager">
@@ -41,6 +49,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="ToolWindowFavorites.ShowToolbar" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.18.3" />
     <property name="javascript.nodejs.core.library.typings.version" value="12.12.62" />
@@ -52,7 +61,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -71,7 +80,9 @@
       <workItem from="1600604274188" duration="2980000" />
       <workItem from="1600698509737" duration="8149000" />
       <workItem from="1600778150178" duration="7293000" />
-      <workItem from="1600788082930" duration="3219000" />
+      <workItem from="1600788082930" duration="3403000" />
+      <workItem from="1600858753444" duration="16094000" />
+      <workItem from="1600951950955" duration="6709000" />
     </task>
     <servers />
   </component>
@@ -91,6 +102,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1066" y="233" key="#Inspections" timestamp="1600862610809">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="1066" y="233" key="#Inspections/0.30.1920.1050@0.30.1920.1050" timestamp="1600862610809" />
     <state x="414" y="210" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600604570242">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
@@ -107,9 +122,13 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="1201" y="310" key="FileChooserDialogImpl/0.30.1920.1050@0.30.1920.1050" timestamp="1600788014361" />
-    <state x="922" y="199" key="SettingsEditor" timestamp="1600788146110">
+    <state x="1235" y="260" key="RollbackChangesDialog" timestamp="1600957429904">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="922" y="199" key="SettingsEditor/0.30.1920.1050@0.30.1920.1050" timestamp="1600788146110" />
+    <state x="1235" y="260" key="RollbackChangesDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1600957429904" />
+    <state x="922" y="199" key="SettingsEditor" timestamp="1600873349435">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="922" y="199" key="SettingsEditor/0.30.1920.1050@0.30.1920.1050" timestamp="1600873349435" />
   </component>
 </project>
