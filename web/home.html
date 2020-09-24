@@ -5,6 +5,7 @@
         <title>Plant Recognizer</title>
         <link rel="stylesheet" href="home.css">
         <script src="modal.js"></script>
+        <script src="dragNdrop.js"></script>
     </head>
     <body>
         <div class="container center" id="blur">
@@ -13,11 +14,23 @@
             <h1 id="logo-txt" class="center">PLANT RECOGNIZER</h1>
             <div class="content">
                 <!-- image upload area-->
+                <!--
                 <a id="img-upload" class="center" href="#">
                     <img id="add-img" src="./data/image/add_image_temp.png" alt=""/>
                     <h2 id="add-txt" class="center">검색할 식물의 사진을 올려놓거나 눌러서 업로드하세요</h2>
-                </a>
+                </a> -->
             </div>
+
+            <div id="drop-area" class="center">
+                <form class="my-form">
+                    <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+                    <label class="button" for="fileElem">Select some files</label>
+                    <br/>
+                    <img id="add-img" src="./data/image/add_image_temp.png" alt=""/>
+                    <h2 id="add-txt" class="center">검색할 식물의 사진을 올려놓거나 눌러서 업로드하세요</h2>
+                </form>
+            </div>
+
         </div>
 
         <!-- after image uploading, select detail area to search -->
