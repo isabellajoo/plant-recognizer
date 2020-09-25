@@ -1,48 +1,56 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
         <title>Plant Recognizer</title>
+        <link rel="stylesheet" href="css/result.css">
+        <script src="lib/slideshow.js"></script>
     </head>
     <body>
         <!-- logo -->
-        <img src="./data/image/logo_temp.png" alt=""/>
-        <h1>PLANT RECOGNIZER</h1>
+        <div id="logo">
+            <img id="logo-img" src="./data/image/logo_temp.png" alt=""/>
+            <h1 id="logo-txt">PLANT RECOGNIZER</h1>
+        </div>
+
         <!-- search image -->
-        <img src="./data/image/search_temp.jpg" alt="" width="75" height="75"/>
+        <img id="img-search" class="center" src="./data/image/search_temp.jpg" alt="" width="75" height="75"/>
 
         <!-- slideshow container of result image -->
-        <div class="slideshow-result-image">
-            <div class="mySlides fade">
-                <img src="./data/image/rose_1.jpg" alt="" width="300"/>
+        <div class="slideshow">
+            <div class="slide fade">
+                <img src="./data/image/rose_1.jpg" alt="" style="width:100%; height:100%"/>
             </div>
-            <div class="mySlides fade">
-                <img src="./data/image/rose_2.jpg" alt="" width="300"/>
+            <div class="slide fade">
+                <img src="./data/image/rose_2.jpg" alt="" style="width:100%; height:100%"/>
             </div>
-            <div class="mySlides fade">
-                <img src="./data/image/rose_3.jpg" alt="" width="300"/>
+            <div class="slide fade">
+                <img src="./data/image/rose_3.jpg" alt="" style="width:100%; height:100%"/>
             </div>
-            <div class="mySlides fade">
-                <img src="./data/image/rose_4.jpg" alt="" width="300"/>
+            <!--
+            <div class="slide">
+                <img src="./data/image/rose_4.jpg" alt="" style="width:100%; height:100%"/>
             </div>
-            <div class="mySlides fade">
-                <img src="./data/image/rose_5.jpg" alt="" width="300"/>
+            <div class="slide">
+                <img src="./data/image/rose_5.jpg" alt="" style="width:100%; height:100%"/>
             </div>
+            -->
 
             <!-- next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="prev" onclick="plusSlides(-1)">&#10095;</a>
+            <a id="prev">&#10094;</a>
+            <a id="next">&#10095;</a>
+
+            <!-- dots -->
+            <div class="center">
+                <span id="dot1" class="dot"></span>
+                <span id="dot2" class="dot"></span>
+                <span id="dot3" class="dot"></span>
+            </div>
         </div>
         <br>
 
-        <!-- dots/circles -->
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-        </div>
-
         <!-- result plant information -->
-        <div>
+        <div class="center">
             <h1>장미</h1>
             <!-- progress bar -->
             <!-- [temporary]this progress tag will be change into the other tag -->
@@ -51,42 +59,48 @@
         </div>
 
         <!-- slide modal for other results -->
-        <div class="slideshow-other-results">
-            <div class="mySlide fade">
-                <img src="./data/image/hibiscus-rosa-sinensis.jpg" alt="" width="50"/>
-                <h6>하와이 무궁화</h6>
-                <progress value="62" max="100"></progress>
-                <p>62%</p>
+        <div class="slideshow-other-results right">
+            <div>
+                <p>
+                    <img src="./data/image/hibiscus-rosa-sinensis.jpg" alt="" width="75"/>
+                    하와이 무궁화
+                </p>
+                <p><progress value="62" max="100"></progress>62%</p>
             </div>
-            <div class="mySlide fade">
-                <img src="./data/image/hollyhock.jpg" alt="" width="50"/>
-                <h6>접시꽃</h6>
-                <progress value="45" max="100"></progress>
-                <p>45%</p>
+            <div>
+                <p>
+                    <img src="./data/image/hollyhock.jpg" alt="" width="75"/>
+                    접시꽃
+                </p>
+                <p><progress value="45" max="100"></progress>45%</p>
             </div>
-            <div class="mySlide fade">
-                <img src="./data/image/nymphaeaceae.jpg" alt="" width="50"/>
-                <h6>수련과</h6>
-                <progress value="22" max="100"></progress>
-                <p>22%</p>
+            <div>
+                <p>
+                    <img src="./data/image/nymphaeaceae.jpg" alt="" width="75"/>
+                    수련과
+                </p>
+                <p><progress value="22" max="100"></progress>22%</p>
             </div>
-            <div class="mySlide fade">
-                <img src="./data/image/sunflower.jpg" alt="" width="50"/>
-                <h6>해바라기</h6>
-                <progress value="15" max="100"></progress>
-                <p>15%</p>
+            <div>
+                <p>
+                    <img src="./data/image/sunflower.jpg" alt="" width="75"/>
+                    해바라기
+                </p>
+                <p><progress value="15" max="100"></progress>15%</p>
             </div>
-            <div class="mySlide fade">
-                <img src="./data/image/daisy.jpg" alt="" width="50"/>
-                <h6>데이지</h6>
-                <progress value="13" max="100"></progress>
-                <p>13%</p>
+            <div>
+                <p>
+                    <img src="./data/image/daisy.jpg" alt="" width="75"/>
+                    데이지
+                </p>
+                <p><progress value="13" max="100"></progress>13%</p>
             </div>
-            <div class="mySlide fade">
-                <img src="./data/image/lilium.jpg" alt="" width="50"/>
-                <h6>백합</h6>
-                <progress value="3" max="100"></progress>
-                <p>3%</p>
+            <div>
+                <p>
+                    <img src="./data/image/lilium.jpg" alt="" width="75"/>
+                    백합
+                </p>
+                <p><progress value="3" max="100"></progress>3%</p>
             </div>
         </div>
     </body>
