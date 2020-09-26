@@ -1,8 +1,7 @@
-import sys, os
+import os, errno
 from bs4 import BeautifulSoup
 from selenium import webdriver
 import urllib, urllib.request
-import requests
 import time
 import random
 from selenium.webdriver.common.keys import Keys
@@ -60,18 +59,18 @@ def Crawl(word):
             srcURL.append(line['data-src'])
             fileNum+=1
 
-    saveDir = base_folder + word
+    saveDir = base_folder + word + '/'
 
     try:
         if not(os.path.isdir(saveDir)):
             os.makedirs(os.path.join(saveDir))
     except OSError as e:
-        if e.errno != os.errno.EEXIST:
+        if e.errno != errno.EEXIST:
             print("[%s] Error  : Failed to create directory!!!!!" % word)
             raise
 
     for i,src in zip(range(fileNum),srcURL):
-        urllib.request.urlretrieve(src, saveDir+"/"+str(i)+".jpg")
+        urllib.request.urlretrieve(src, saveDir+word+"_%03d.jpg" % i)
         print("[%s] Notice : %3d saved" % (word, i))
 
 if search:
@@ -81,7 +80,7 @@ if search:
 else:
     search_list = []
     print('--- Read from search.txt ---')
-    with open('search.txt', 'r') as f:
+    with open('search.txt', 'r', encoding='UTF8') as f:
         search_list = f.readlines()
     print('---   Reading Complete   ---')
     print('---    Crawling Start    ---')
