@@ -4,6 +4,7 @@ window.onload = function() {
     var modal = document.getElementById("modal");
     var cancel = document.getElementById("cancel");
 
+
     imgupload.onclick = function() {
         blur.classList.toggle("active");
         modal.classList.toggle("active");

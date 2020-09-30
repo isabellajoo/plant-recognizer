@@ -4,8 +4,6 @@
         <meta charset="utf-8">
         <title>Plant Recognizer</title>
         <link rel="stylesheet" href="css/home.css">
-        <script src="lib/modal.js"></script>
-        <script src="lib/dragNdrop.js"></script>
     </head>
     <body>
         <div class="container center" id="blur">
@@ -14,32 +12,25 @@
                 <img id="logo-img" src="./data/image/logo_temp.png" alt=""/>
                 <h1 id="logo-txt">PLANT RECOGNIZER</h1>
             </div>
-            <div class="content">
-                <!-- image upload area-->
-                <!--
-                <a id="img-upload" class="center" href="#">
-                    <img id="add-img" src="./data/image/add_image_temp.png" alt=""/>
-                    <h2 id="add-txt" class="center">검색할 식물의 사진을 올려놓거나 눌러서 업로드하세요</h2>
-                </a> -->
-            </div>
 
+            <!-- image upload -->
             <div>
-                <form class="my-form">
+                <form class="my-form" id="img-upload">
                     <label class="button center" id="drop-area">
-                        <input type="file" name="file" id="fileupload">
+                        <input type="file" name="file" id="file-upload" accept="image/*" onchange="handleFiles(this.files)">
                         <img id="add-img" src="./data/image/add_image_temp.png" alt=""/>
-                        <h2 id="add-txt" class="center">검색할 식물의 사진을 올려놓거나 눌러서 업로드하세요</h2>
+                        <br/>
+                        검색할 식물의 사진을 올려놓거나 눌러서 업로드하세요
                     </label>
                 </form>
             </div>
-
         </div>
 
-        <!-- after image uploading, select detail area to search -->
+        <!-- modal -->
         <div id="modal">
             <h2 id="modal-header" class="center">검색할 영역을 선택하세요</h2>
             <div id="modal-content">
-
+                <img id="img-preview" src="" alt=""/>
             </div>
             <div id="modal-footer">
                 <button type="button" class="btn">완료</button>
@@ -47,4 +38,6 @@
             </div>
         </div>
     </body>
+    <script type="text/javascript" src="lib/modal.js"></script>
+    <script type="text/javascript" src="lib/dragdrop.js"></script>
 </html>

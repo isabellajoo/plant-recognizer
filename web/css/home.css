@@ -1,22 +1,3 @@
-.container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    transition: 0.5s;
-}
-
-.container .content {
-    position: relative;
-}
-
-.container#blur.active {
-    filter: blur(10px);
-    pointer-events: none;
-    user-select: none;
-}
-
 #logo-img {
     margin-top: 100px;
 }
@@ -26,33 +7,33 @@
     margin-bottom: 10px;
 }
 
-
-#img-upload {
-    position: relative;
-    color: black;
-    text-decoration: none;
-    background-color: lightskyblue;
-    background-clip: content-box;
-    border-radius: 20px;
-    width: 50%;
-    height: 60vh;
-
-}
-
 #add-img {
     margin-top: 100px;
     width: 100px;
     height: 100px;
 }
 
-#add-txt {
-    margin-top: 20px;
-    width: auto;
-    height: auto;
-    min-font-size: 11px;
-    font-size: 1.5vw;
+/***************************************** blur **********************************************/
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
 }
 
+.container .my-form {
+    position: relative;
+}
+
+.container#blur.active {
+    filter: blur(10px);
+    pointer-events: none;
+    user-select: none;
+}
+
+/******************************************* modal *******************************************/
 #modal {
     visibility: hidden;
     opacity: 0;
@@ -99,32 +80,19 @@
     outline: none;
 }
 
-
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-
-.btn {
-    float: right
-}
-
-.btn:hover,
-.btn:focus {
-    cursor: pointer;
-    outline: none;
-}
-
+/********************************* file upload *********************************/
 #drop-area {
+    position: relative;
     border: 2px dashed #ccc;
     border-radius: 20px;
-    width: 480px;
-    font-family: sans-serif;
+    width: 50%;
+    height: 60vh;
     margin: 100px auto;
     padding: 20px;
+    min-font-size: 11px;
+    font-size: 1.5vw;
 }
+
 #drop-area.highlight {
     border-color: purple;
 }
@@ -152,6 +120,30 @@
 .button:hover {
     background: #ddd;
 }
-#fileupload {
+#file-upload {
     display: none;
+}
+
+
+
+
+
+
+
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.btn {
+    float: right
+}
+
+.btn:hover,
+.btn:focus {
+    cursor: pointer;
+    outline: none;
 }

@@ -20,9 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30fc2966-7ef6-436d-a304-28db03633308" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/dragNdrop.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/lib/dragdrop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/lib/modal.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,13 +57,16 @@
     <property name="javascript.nodejs.core.library.typings.version" value="12.12.62" />
     <property name="last_opened_file_path" value="$USER_HOME$/AppData/Roaming/npm/sass.cmd" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.stylelint" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="settings.editor.selected.configurable" value="settings.webpack" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -86,7 +92,8 @@
       <workItem from="1600951950955" duration="14510000" />
       <workItem from="1601044077210" duration="4743000" />
       <workItem from="1601397865832" duration="19000" />
-      <workItem from="1601472777619" duration="2094000" />
+      <workItem from="1601472777619" duration="9215000" />
+      <workItem from="1601483351864" duration="1895000" />
     </task>
     <servers />
   </component>
@@ -122,18 +129,18 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="1087" y="331" key="EditFileWatcherDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1600788145266" />
-    <state x="1201" y="310" key="FileChooserDialogImpl" timestamp="1600788014361">
+    <state x="1201" y="310" key="FileChooserDialogImpl" timestamp="1601482594905">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="1201" y="310" key="FileChooserDialogImpl/0.30.1920.1050@0.30.1920.1050" timestamp="1600788014361" />
+    <state x="1201" y="310" key="FileChooserDialogImpl/0.30.1920.1050@0.30.1920.1050" timestamp="1601482594905" />
     <state x="1235" y="260" key="RollbackChangesDialog" timestamp="1600957429904">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="1235" y="260" key="RollbackChangesDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1600957429904" />
-    <state x="922" y="199" key="SettingsEditor" timestamp="1600873349435">
+    <state x="922" y="199" key="SettingsEditor" timestamp="1601483465239">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="922" y="199" key="SettingsEditor/0.30.1920.1050@0.30.1920.1050" timestamp="1600873349435" />
+    <state x="922" y="199" key="SettingsEditor/0.30.1920.1050@0.30.1920.1050" timestamp="1601483465239" />
     <state x="357" y="167" width="1748" height="860" key="dock-window-1" timestamp="1601475718208">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
