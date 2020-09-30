@@ -20,11 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30fc2966-7ef6-436d-a304-28db03633308" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/lib/dragNdrop.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/lib/dragdrop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/lib/dragdrop.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/lib/dragdrop.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/lib/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/lib/modal.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +92,7 @@
       <workItem from="1601044077210" duration="4743000" />
       <workItem from="1601397865832" duration="19000" />
       <workItem from="1601472777619" duration="9215000" />
-      <workItem from="1601483351864" duration="1895000" />
+      <workItem from="1601483351864" duration="2555000" />
     </task>
     <servers />
   </component>
@@ -117,10 +116,10 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="1066" y="233" key="#Inspections/0.30.1920.1050@0.30.1920.1050" timestamp="1600862610809" />
-    <state x="414" y="210" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600604570242">
+    <state x="414" y="210" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601485474917">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="414" y="210" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1600604570242" />
+    <state x="414" y="210" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1601485474917" />
     <state x="1201" y="260" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1600788048922">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>

@@ -1,14 +1,14 @@
 window.onload = function() {
-    var imgupload = document.getElementById("img-upload");
-    var blur = document.getElementById("blur");
-    var modal = document.getElementById("modal");
-    var cancel = document.getElementById("cancel");
+    var blur = document.getElementById('blur');
+    var modal = document.getElementById('modal');
+    var cancel = document.getElementById('cancel');
 
-
+    /*
     imgupload.onclick = function() {
         blur.classList.toggle("active");
         modal.classList.toggle("active");
     }
+    */
 
     cancel.onclick = function() {
         blur.classList.toggle("active");

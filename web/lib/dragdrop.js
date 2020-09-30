@@ -1,5 +1,8 @@
 var dropArea = document.getElementById('drop-area');
 var imgpreview = document.getElementById('img-preview');
+var blur = document.getElementById('blur');
+var modal = document.getElementById('modal');
+var cancel = document.getElementById('cancel');
 
 ;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
     dropArea.addEventListener(eventName, preventDefaults, false)
@@ -38,7 +41,6 @@ function handleDrop(e) {
 
 function handleFiles(files) {
     files = [...files];
-    //files.forEach(uploadFile);
     files.forEach(previewFile);
 }
 
@@ -47,5 +49,17 @@ function previewFile(file) {
     reader.readAsDataURL(file);
     reader.onloadend = function() {
         imgpreview.src = reader.result;
+        popUp();
     }
+}
+
+function popUp() {
+    blur.classList.toggle('active');
+    modal.classList.toggle('active');
+}
+
+cancel.onclick = function() {
+    blur.classList.toggle('active');
+    modal.classList.toggle('active');
+    imgpreview.src = '';
 }
