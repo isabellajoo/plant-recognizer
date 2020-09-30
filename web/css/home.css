@@ -117,7 +117,6 @@
     outline: none;
 }
 
-
 #drop-area {
     border: 2px dashed #ccc;
     border-radius: 20px;
@@ -153,6 +152,6 @@
 .button:hover {
     background: #ddd;
 }
-#fileElem {
+#fileupload {
     display: none;
 }

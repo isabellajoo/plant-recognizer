@@ -23,13 +23,13 @@
                 </a> -->
             </div>
 
-            <div id="drop-area" class="center">
+            <div>
                 <form class="my-form">
-                    <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
-                    <label class="button" for="fileElem">Select some files</label>
-                    <br/>
-                    <img id="add-img" src="./data/image/add_image_temp.png" alt=""/>
-                    <h2 id="add-txt" class="center">검색할 식물의 사진을 올려놓거나 눌러서 업로드하세요</h2>
+                    <label class="button center" id="drop-area">
+                        <input type="file" name="file" id="fileupload">
+                        <img id="add-img" src="./data/image/add_image_temp.png" alt=""/>
+                        <h2 id="add-txt" class="center">검색할 식물의 사진을 올려놓거나 눌러서 업로드하세요</h2>
+                    </label>
                 </form>
             </div>
 

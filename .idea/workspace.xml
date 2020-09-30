@@ -21,13 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="30fc2966-7ef6-436d-a304-28db03633308" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/dragNdrop.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/lib/dragNdrop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/load.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/css/load.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/load.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/load.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/lib/modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/result.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +84,9 @@
       <workItem from="1600788082930" duration="3403000" />
       <workItem from="1600858753444" duration="16094000" />
       <workItem from="1600951950955" duration="14510000" />
-      <workItem from="1601044077210" duration="3862000" />
+      <workItem from="1601044077210" duration="4743000" />
+      <workItem from="1601397865832" duration="19000" />
+      <workItem from="1601472777619" duration="2094000" />
     </task>
     <servers />
   </component>
@@ -137,5 +134,13 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="922" y="199" key="SettingsEditor/0.30.1920.1050@0.30.1920.1050" timestamp="1600873349435" />
+    <state x="357" y="167" width="1748" height="860" key="dock-window-1" timestamp="1601475718208">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="357" y="167" width="1748" height="860" key="dock-window-1/0.30.1920.1050@0.30.1920.1050" timestamp="1601475718208" />
+    <state x="53" y="129" width="1748" height="860" key="dock-window-2" timestamp="1601475718208">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="53" y="129" width="1748" height="860" key="dock-window-2/0.30.1920.1050@0.30.1920.1050" timestamp="1601475718208" />
   </component>
 </project>
