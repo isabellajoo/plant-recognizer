@@ -43,7 +43,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 65%;
-    height: 60vh;
+    height: auto;
     overflow: auto;
     box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
     background-color: #fefefe;
@@ -61,7 +61,7 @@
     background-color: #fefefe;
 }
 
-.modal-content {
+.modal-container {
     background-color: #fefefe;
     width: 50%;
 }
@@ -73,6 +73,7 @@
 
 .modal-footer {
     background-color: #fefefe;
+    padding: 30px;
 }
 
 .close {
@@ -128,13 +129,6 @@
 #file-upload {
     display: none;
 }
-
-
-
-
-
-
-
 
 .center {
     display: block;

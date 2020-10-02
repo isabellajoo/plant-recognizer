@@ -4,7 +4,6 @@
         <meta charset="utf-8">
         <title>Plant Recognizer</title>
         <link rel="stylesheet" href="css/result.css">
-        <script src="lib/slideshow.js"></script>
     </head>
     <body>
         <!-- logo -->
@@ -16,92 +15,98 @@
         <!-- search image -->
         <img id="img-search" class="center" src="./data/image/search_temp.jpg" alt="" width="75" height="75"/>
 
-        <!-- slideshow container of result image -->
-        <div class="slideshow">
-            <div class="slide fade">
-                <img src="./data/image/rose_1.jpg" alt="" style="width:100%; height:100%"/>
-            </div>
-            <div class="slide fade">
-                <img src="./data/image/rose_2.jpg" alt="" style="width:100%; height:100%"/>
-            </div>
-            <div class="slide fade">
-                <img src="./data/image/rose_3.jpg" alt="" style="width:100%; height:100%"/>
-            </div>
-            <!--
-            <div class="slide">
-                <img src="./data/image/rose_4.jpg" alt="" style="width:100%; height:100%"/>
-            </div>
-            <div class="slide">
-                <img src="./data/image/rose_5.jpg" alt="" style="width:100%; height:100%"/>
-            </div>
-            -->
+        <div id="result" class="center">
+            <!-- slideshow container of result image -->
+            <div class="slideshow">
+                <div class="slide fade">
+                    <img src="./data/image/rose_1.jpg" alt="" style="width:100%; height:100%"/>
+                </div>
+                <div class="slide fade">
+                    <img src="./data/image/rose_2.jpg" alt="" style="width:100%; height:100%"/>
+                </div>
+                <div class="slide fade">
+                    <img src="./data/image/rose_3.jpg" alt="" style="width:100%; height:100%"/>
+                </div>
+                <!--
+                <div class="slide">
+                    <img src="./data/image/rose_4.jpg" alt="" style="width:100%; height:100%"/>
+                </div>
+                <div class="slide">
+                    <img src="./data/image/rose_5.jpg" alt="" style="width:100%; height:100%"/>
+                </div>
+                -->
 
-            <!-- next and previous buttons -->
-            <a id="prev">&#10094;</a>
-            <a id="next">&#10095;</a>
+                <!-- next and previous buttons -->
+                <div id="slide-btn">
+                    <a id="prev">&#10094;</a>
+                    <a id="next">&#10095;</a>
+                </div>
 
-            <!-- dots -->
-            <div class="center">
+                <!-- dots -->
                 <span id="dot1" class="dot"></span>
                 <span id="dot2" class="dot"></span>
                 <span id="dot3" class="dot"></span>
             </div>
-        </div>
-        <br>
 
-        <!-- result plant information -->
-        <div class="center">
-            <h1>장미</h1>
-            <!-- progress bar -->
-            <!-- [temporary]this progress tag will be change into the other tag -->
-            <progress value="99" max="100"></progress>
-            <p>99%</p>
-        </div>
+            <br>
 
-        <!-- slide modal for other results -->
-        <div class="slideshow-other-results right">
-            <div>
-                <p>
-                    <img src="./data/image/hibiscus-rosa-sinensis.jpg" alt="" width="75"/>
-                    하와이 무궁화
-                </p>
-                <p><progress value="62" max="100"></progress>62%</p>
+            <!-- result plant information -->
+            <div class="center">
+                <h1>장미</h1>
+                <!-- progress bar -->
+                <!-- [temporary]this progress tag will be change into the other tag -->
+                <progress value="99" max="100"></progress>
+                <p>99%</p>
             </div>
-            <div>
-                <p>
-                    <img src="./data/image/hollyhock.jpg" alt="" width="75"/>
-                    접시꽃
-                </p>
-                <p><progress value="45" max="100"></progress>45%</p>
-            </div>
-            <div>
-                <p>
-                    <img src="./data/image/nymphaeaceae.jpg" alt="" width="75"/>
-                    수련과
-                </p>
-                <p><progress value="22" max="100"></progress>22%</p>
-            </div>
-            <div>
-                <p>
-                    <img src="./data/image/sunflower.jpg" alt="" width="75"/>
-                    해바라기
-                </p>
-                <p><progress value="15" max="100"></progress>15%</p>
-            </div>
-            <div>
-                <p>
-                    <img src="./data/image/daisy.jpg" alt="" width="75"/>
-                    데이지
-                </p>
-                <p><progress value="13" max="100"></progress>13%</p>
-            </div>
-            <div>
-                <p>
-                    <img src="./data/image/lilium.jpg" alt="" width="75"/>
-                    백합
-                </p>
-                <p><progress value="3" max="100"></progress>3%</p>
+
+
+            <!-- slide modal for other results -->
+            <div id="slide-modal">
+                <div class="modal-container">
+                    <img class="slide-modal-img" src="./data/image/hibiscus-rosa-sinensis.jpg" alt="" width="75"/>
+                    <div class="modal-content">
+                        <p class="modal-name">하와이 무궁화</p>
+                        <p class="modal-progress"><progress value="62" max="100"></progress>62%</p>
+                    </div>
+                </div>
+                <div class="modal-container">
+                    <img class="slide-modal-img" src="./data/image/hollyhock.jpg" alt="" width="75"/>
+                    <div class="modal-content">
+                        <p class="modal-name">접시꽃</p>
+                        <p class="modal-progress"><progress value="45" max="100"></progress>45%</p>
+                    </div>
+                </div>
+                <div class="modal-container">
+                    <img class="slide-modal-img" src="./data/image/nymphaeaceae.jpg" alt="" width="75"/>
+                    <div class="modal-content">
+                        <p class="modal-name">수련과</p>
+                        <p class="modal-progress"><progress value="22" max="100"></progress>22%</p>
+                    </div>
+                </div>
+                <div class="modal-container">
+                    <img class="slide-modal-img" src="./data/image/sunflower.jpg" alt="" width="75"/>
+                    <div class="modal-content">
+                        <p class="modal-name">해바라기</p>
+                        <p class="modal-progress"><progress value="15" max="100"></progress>15%</p>
+                    </div>
+                </div>
+                <div class="modal-container">
+                    <img class="slide-modal-img" src="./data/image/daisy.jpg" alt="" width="75"/>
+                    <div class="modal-content">
+                        <p class="modal-name">데이지</p>
+                        <p class="modal-progress"><progress value="13" max="100"></progress>13%</p>
+                    </div>
+                </div>
+                <div class="modal-container">
+                    <img class="slide-modal-img" src="./data/image/lilium.jpg" alt="" width="75"/>
+                    <div class="modal-content">
+                        <p class="modal-name">백합</p>
+                        <p class="modal-progress"><progress value="3" max="100"></progress>3%</p>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
+    <script src="lib/slideshow.js"></script>
+    <script type="text/javascript" src="lib/modal.js"></script>
 </html>
