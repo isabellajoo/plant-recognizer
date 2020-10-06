@@ -1,6 +1,7 @@
 #folder
 Crawling/image
 MachineLearning/image
+MachineLearning/Categories.txt
 MachineLearning/label.txt
-MachineLearning/data.npy
+MachineLearning/image_data.npy
 ML
