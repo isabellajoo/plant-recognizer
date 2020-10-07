@@ -63,3 +63,4 @@ cancel.onclick = function() {
     modal.classList.toggle('active');
     imgpreview.src = '';
 }
+

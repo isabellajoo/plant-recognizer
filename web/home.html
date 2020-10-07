@@ -4,12 +4,13 @@
         <meta charset="utf-8">
         <title>Plant Recognizer</title>
         <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.9/cropper.css" integrity="sha512-949FvIQOibfhLTgmNws4F3DVlYz3FmCRRhJznR22hx76SKkcpZiVV5Kwo0iwK9L6BFuY+6mpdqB2+vDIGVuyHg==" crossorigin="anonymous" />
     </head>
     <body>
         <div class="container center" id="blur">
             <!-- logo -->
             <div class="center">
-                <img id="logo-img" src="./data/image/logo_temp.png" alt=""/>
+                <img id="logo-img" src="data/image/logo_temp.png" alt=""/>
                 <h1 id="logo-txt">PLANT RECOGNIZER</h1>
             </div>
 
@@ -18,7 +19,7 @@
                 <form class="my-form" id="img-upload">
                     <label class="button center" id="drop-area">
                         <input type="file" name="file" id="file-upload" accept="image/*" onchange="handleFiles(this.files)">
-                        <img id="add-img" src="./data/image/add_image_temp.png" alt=""/>
+                        <img id="add-img" src="data/image/add_image_temp.png" alt=""/>
                         <br/>
                         검색할 식물의 사진을 올려놓거나 눌러서 업로드하세요
                     </label>
@@ -27,6 +28,26 @@
         </div>
 
         <!-- modal -->
+        <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header center">
+                        <h5 class="modal-title" id="modalLabel">검색할 영역을 선택하세요</h5>
+                    </div>
+                    <div class="modal-content center">
+                        <div class="img-container">
+                            <img id="img-preview" src="" alt="">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn">완료</button>
+                        <button id="cancel" type="button" class="btn" data-dismiss="modal">취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--
         <div id="modal">
             <h2 id="modal-header" class="center">검색할 영역을 선택하세요</h2>
             <div id="modal-content">
@@ -37,6 +58,11 @@
                 <a id="cancel" class="btn" href="#">취소</a>
             </div>
         </div>
+        -->
     </body>
     <script type="text/javascript" src="lib/dragdrop.js"></script>
+    <script type="text/javascript" src="lib/crop.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.9/cropper.css" integrity="sha512-949FvIQOibfhLTgmNws4F3DVlYz3FmCRRhJznR22hx76SKkcpZiVV5Kwo0iwK9L6BFuY+6mpdqB2+vDIGVuyHg==" crossorigin="anonymous" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.js"></script>
 </html>

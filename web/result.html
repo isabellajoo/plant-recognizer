@@ -8,24 +8,27 @@
     <body>
         <!-- logo -->
         <div id="logo">
-            <img id="logo-img" src="./data/image/logo_temp.png" alt=""/>
+            <img id="logo-img" src="data/image/logo_temp.png" alt=""/>
             <h1 id="logo-txt">PLANT RECOGNIZER</h1>
         </div>
 
         <!-- search image -->
-        <img id="img-search" class="center" src="./data/image/search_temp.jpg" alt="" width="75" height="75"/>
+        <img id="img-search" class="center" src="data/image/search_temp.jpg" alt="" width="75" height="75"/>
 
-        <div id="result" class="center">
+        <div id="result">
+            <!-- previous buttons -->
+            <a id="prev" class="slide-btn">&#10094;</a>
+
             <!-- slideshow container of result image -->
-            <div class="slideshow">
+            <div class="slideshow center">
                 <div class="slide fade">
-                    <img src="./data/image/rose_1.jpg" alt="" style="width:100%; height:100%"/>
+                    <img src="data/image/rose_1.jpg" alt="" style="width:100%; height:100%"/>
                 </div>
                 <div class="slide fade">
-                    <img src="./data/image/rose_2.jpg" alt="" style="width:100%; height:100%"/>
+                    <img src="data/image/rose_2.jpg" alt="" style="width:100%; height:100%"/>
                 </div>
                 <div class="slide fade">
-                    <img src="./data/image/rose_3.jpg" alt="" style="width:100%; height:100%"/>
+                    <img src="data/image/rose_3.jpg" alt="" style="width:100%; height:100%"/>
                 </div>
                 <!--
                 <div class="slide">
@@ -35,21 +38,17 @@
                     <img src="./data/image/rose_5.jpg" alt="" style="width:100%; height:100%"/>
                 </div>
                 -->
+            </div>
 
-                <!-- next and previous buttons -->
-                <div id="slide-btn">
-                    <a id="prev">&#10094;</a>
-                    <a id="next">&#10095;</a>
-                </div>
+            <!-- next buttons -->
+            <a id="next" class="slide-btn">&#10095;</a>
 
-                <!-- dots -->
+            <!-- dots -->
+            <div class="center">
                 <span id="dot1" class="dot"></span>
                 <span id="dot2" class="dot"></span>
                 <span id="dot3" class="dot"></span>
             </div>
-
-            <br>
-
             <!-- result plant information -->
             <div class="center">
                 <h1>장미</h1>
@@ -61,44 +60,44 @@
 
 
             <!-- slide modal for other results -->
-            <div id="slide-modal">
+            <div id="slide-modal" class="center">
                 <div class="modal-container">
-                    <img class="slide-modal-img" src="./data/image/hibiscus-rosa-sinensis.jpg" alt="" width="75"/>
+                    <img class="slide-modal-img" src="data/image/hibiscus-rosa-sinensis.jpg" alt="" width="75"/>
                     <div class="modal-content">
                         <p class="modal-name">하와이 무궁화</p>
                         <p class="modal-progress"><progress value="62" max="100"></progress>62%</p>
                     </div>
                 </div>
                 <div class="modal-container">
-                    <img class="slide-modal-img" src="./data/image/hollyhock.jpg" alt="" width="75"/>
+                    <img class="slide-modal-img" src="data/image/hollyhock.jpg" alt="" width="75"/>
                     <div class="modal-content">
                         <p class="modal-name">접시꽃</p>
                         <p class="modal-progress"><progress value="45" max="100"></progress>45%</p>
                     </div>
                 </div>
                 <div class="modal-container">
-                    <img class="slide-modal-img" src="./data/image/nymphaeaceae.jpg" alt="" width="75"/>
+                    <img class="slide-modal-img" src="data/image/nymphaeaceae.jpg" alt="" width="75"/>
                     <div class="modal-content">
                         <p class="modal-name">수련과</p>
                         <p class="modal-progress"><progress value="22" max="100"></progress>22%</p>
                     </div>
                 </div>
                 <div class="modal-container">
-                    <img class="slide-modal-img" src="./data/image/sunflower.jpg" alt="" width="75"/>
+                    <img class="slide-modal-img" src="data/image/sunflower.jpg" alt="" width="75"/>
                     <div class="modal-content">
                         <p class="modal-name">해바라기</p>
                         <p class="modal-progress"><progress value="15" max="100"></progress>15%</p>
                     </div>
                 </div>
                 <div class="modal-container">
-                    <img class="slide-modal-img" src="./data/image/daisy.jpg" alt="" width="75"/>
+                    <img class="slide-modal-img" src="data/image/daisy.jpg" alt="" width="75"/>
                     <div class="modal-content">
                         <p class="modal-name">데이지</p>
                         <p class="modal-progress"><progress value="13" max="100"></progress>13%</p>
                     </div>
                 </div>
                 <div class="modal-container">
-                    <img class="slide-modal-img" src="./data/image/lilium.jpg" alt="" width="75"/>
+                    <img class="slide-modal-img" src="data/image/lilium.jpg" alt="" width="75"/>
                     <div class="modal-content">
                         <p class="modal-name">백합</p>
                         <p class="modal-progress"><progress value="3" max="100"></progress>3%</p>
