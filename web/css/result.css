@@ -15,6 +15,11 @@
     border-radius: 50%;
 }
 
+.return {
+    padding: 10px;
+}
+
+
 #result {
     position: relative;
 }
@@ -33,13 +38,21 @@
     text-align: right;
 }
 
+.slide-container {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    margin: 20px auto 20px auto;
+}
+
 .slideshow {
+    position: relative;
+}
+
+.slideshow img {
     max-width: 300px;
     max-height: 300px;
-    position: relative;
     object-fit: contain;
-    margin: auto;
-    padding-top: 20px;
 }
 
 .slide {
@@ -47,7 +60,10 @@
 }
 
 .slide-btn {
-    height: 300px;
+
+}
+
+.result-info {
 }
 
 #prev, #next {
@@ -55,9 +71,9 @@
     display: inline-block;
     cursor: pointer;
     top: 0;
-    width: auto;
-    height: auto;
-    margin-top: -22px;
+    width: 10px;
+    height: 23px;
+    margin-top: 100px;
     padding: 16px;
     color: black;
     font-weight: bold;
@@ -67,18 +83,16 @@
     user-select: none;
 }
 #prev {
-    margin-right: 150px;
     float: left;
 }
 
 #next {
     float: right;
-    margin-left: 150px;
     border-radius: 3px 0 0 3px;
 }
 
-#prev:hover, #next:hover {
-    background-color: rgba(0,0,0,0.8);
+#prev:hover, #next:hover, .return:hover {
+    background-color: lightgray;
 }
 
 .dot {
@@ -127,6 +141,7 @@
     overflow: auto;
     top: 0;
     right: 0;
+    z-index: 1;
 }
 .modal-container {
     padding: 20px;

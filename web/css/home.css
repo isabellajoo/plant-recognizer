@@ -42,9 +42,9 @@
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 65%;
+    width: 60vw;
     height: auto;
-    overflow: auto;
+    overflow: hidden;
     box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
     background-color: #fefefe;
     border-radius: 20px;
@@ -57,23 +57,60 @@
     transition: 0.5s;
 }
 
+.modal-dialog {
+    position: relative;
+    width: auto;
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: .3rem;
+    outline: 0;
+}
+
 .modal-header {
-    background-color: #fefefe;
+    background-color: lightgray;
+    display: flex;
+    align-items: flex-start;;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
 }
 
-.modal-container {
-    background-color: #fefefe;
-    width: 50%;
-}
-
-#img-preview {
-    width: 80%;
-    height: 100%;
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+    max-height: 60vh;
 }
 
 .modal-footer {
-    background-color: #fefefe;
+    background-color: lightgray;
     padding: 30px;
+}
+
+.modal-title {
+    text-align: center;
+}
+
+.img-container img {
+    max-width: 60vw;
+    max-height: 60vh;
+}
+
+#img-preview {
+    display: block;
+    max-width: 100%;
+    vertical-align: middle;
+    border-style: none;
 }
 
 .close {
@@ -85,6 +122,8 @@
     cursor: pointer;
     outline: none;
 }
+
+
 
 /********************************* file upload *********************************/
 #drop-area {
