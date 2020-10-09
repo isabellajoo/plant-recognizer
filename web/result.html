@@ -13,54 +13,59 @@
         </div>
 
         <!-- search image -->
-        <img id="img-search" class="return center" src="data/image/search_temp.jpg" alt="" width="75" height="75"/>
+        <div class="return center">
+            <img id="img-search" src="data/image/search_temp.jpg" alt=""/>
+            <img id="img-return" src="data/image/return_image_temp.png" alt=""/>
+        </div>
 
         <div id="result">
-            <div class="slide-container">
-                <!-- previous buttons -->
-                <a id="prev" class="slide-btn">&#10094;</a>
+            <div class="result-main">
+                <div class="slide-container">
+                    <!-- previous buttons -->
+                    <a id="prev" class="slide-btn">&#10094;</a>
 
-                <!-- slideshow container of result image -->
-                <div class="slideshow">
-                    <div class="slide fade">
-                        <img src="data/image/rose_1.jpg" alt="" style="width:100%; height:100%"/>
+                    <!-- slideshow container of result image -->
+                    <div class="slideshow">
+                        <div class="slide fade">
+                            <img src="data/image/rose_1.jpg" alt="" style="width:100%; height:100%"/>
+                        </div>
+                        <div class="slide fade">
+                            <img src="data/image/rose_2.jpg" alt="" style="width:100%; height:100%"/>
+                        </div>
+                        <div class="slide fade">
+                            <img src="data/image/rose_3.jpg" alt="" style="width:100%; height:100%"/>
+                        </div>
+                        <!--
+                        <div class="slide">
+                            <img src="./data/image/rose_4.jpg" alt="" style="width:100%; height:100%"/>
+                        </div>
+                        <div class="slide">
+                            <img src="./data/image/rose_5.jpg" alt="" style="width:100%; height:100%"/>
+                        </div>
+                        -->
                     </div>
-                    <div class="slide fade">
-                        <img src="data/image/rose_2.jpg" alt="" style="width:100%; height:100%"/>
-                    </div>
-                    <div class="slide fade">
-                        <img src="data/image/rose_3.jpg" alt="" style="width:100%; height:100%"/>
-                    </div>
-                    <!--
-                    <div class="slide">
-                        <img src="./data/image/rose_4.jpg" alt="" style="width:100%; height:100%"/>
-                    </div>
-                    <div class="slide">
-                        <img src="./data/image/rose_5.jpg" alt="" style="width:100%; height:100%"/>
-                    </div>
-                    -->
+
+                    <!-- next buttons -->
+                    <a id="next" class="slide-btn">&#10095;</a>
                 </div>
 
-                <!-- next buttons -->
-                <a id="next" class="slide-btn">&#10095;</a>
-            </div>
+                <div class="result-info">
+                    <!-- dots -->
+                    <div class="center">
+                        <span id="dot1" class="dot"></span>
+                        <span id="dot2" class="dot"></span>
+                        <span id="dot3" class="dot"></span>
+                    </div>
+                    <!-- result plant information -->
+                    <div class="center">
+                        <h1>장미</h1>
+                        <!-- progress bar -->
+                        <!-- [temporary]this progress tag will be change into the other tag -->
+                        <progress value="99" max="100"></progress>
+                        <p>99%</p>
+                    </div>
 
-            <div class="result-info">
-                <!-- dots -->
-                <div class="center">
-                    <span id="dot1" class="dot"></span>
-                    <span id="dot2" class="dot"></span>
-                    <span id="dot3" class="dot"></span>
                 </div>
-                <!-- result plant information -->
-                <div class="center">
-                    <h1>장미</h1>
-                    <!-- progress bar -->
-                    <!-- [temporary]this progress tag will be change into the other tag -->
-                    <progress value="99" max="100"></progress>
-                    <p>99%</p>
-                </div>
-
             </div>
 
             <!-- slide modal for other results -->
