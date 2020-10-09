@@ -22,7 +22,7 @@
     <list default="true" id="36fe22f4-cb59-4761-9e1c-bc0faa8903cb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/result.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/result.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/slideshow.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/slideshow.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/result.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +34,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1iYJ9J8JBzFqmc3GMIRgCwWmVt5" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -60,7 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1602078438232</updated>
       <workItem from="1602078439284" duration="9603000" />
-      <workItem from="1602246096384" duration="4287000" />
+      <workItem from="1602246096384" duration="21606000" />
     </task>
     <servers />
   </component>
@@ -78,5 +80,11 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="623" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1602260531959">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="623" y="257" width="672" height="678" key="search.everywhere.popup/0.30.1920.1050@0.30.1920.1050" timestamp="1602260531959" />
   </component>
 </project>

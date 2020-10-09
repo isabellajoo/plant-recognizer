@@ -1,5 +1,7 @@
-var prev = document.getElementById("prev");
-var next = document.getElementById("next");
+var slidePrev = document.getElementById("slide-prev");
+var slideNext = document.getElementById("slide-next");
+var scrollPrev = document.getElementById("scroll-prev");
+var scrollNext = document.getElementById("scroll-next");
 var dot_1 = document.getElementById("dot1");
 var dot_2 = document.getElementById("dot2");
 var dot_3 = document.getElementById("dot3");
@@ -7,10 +9,10 @@ var dot_3 = document.getElementById("dot3");
 var slideIndex = 1;
 showSlides(slideIndex);
 
-prev.onclick = function() {
+slidePrev.onclick = function() {
     plusSlides(-1);
 }
-next.onclick = function() {
+slideNext.onclick = function() {
     plusSlides(1);
 }
 
@@ -27,7 +29,6 @@ dot_3.onclick = function() {
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }
-
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
