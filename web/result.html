@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Plant Recognizer</title>
+        <link rel="stylesheet" href="css/result.css">
+    </head>
+    <body>
+        <!-- logo -->
+        <div id="logo">
+            <img id="logo-img" src="data/image/logo_temp.png" alt=""/>
+            <h1 id="logo-txt">PLANT RECOGNIZER</h1>
+        </div>
+
+        <div id="main">
+            <div id="result">
+                <!-- search image -->
+                <div id="retry">
+                    <img id="img-search" src="data/image/search_temp.jpg" alt=""/>
+                    <img id="img-return" src="data/image/return_image_temp.png" alt=""/>
+                </div>
+
+                <div id="result-main">
+                    <div id="result-container01">
+                        <div id="slide-container">
+                            <!-- previous buttons -->
+                            <a id="slide-prev">&#10094;</a>
+
+                            <!-- slideshow container of result image -->
+                            <div id="slideshow">
+                                <div class="slide fade">
+                                    <img src="data/image/rose_1.jpg" alt=""/>
+                                </div>
+                                <div class="slide fade">
+                                    <img src="data/image/rose_2.jpg" alt=""/>
+                                </div>
+                                <div class="slide fade">
+                                    <img src="data/image/rose_3.jpg" alt=""/>
+                                </div>
+                            </div>
+
+                            <!-- next buttons -->
+                            <a id="slide-next">&#10095;</a>
+                        </div>
+                    </div>
+
+                    <div id="result-container02">
+                        <div id="result-info">
+                            <!-- dots -->
+                            <div id="dots">
+                                <span id="dot1" class="dot"></span>
+                                <span id="dot2" class="dot"></span>
+                                <span id="dot3" class="dot"></span>
+                            </div>
+
+                            <!-- result plant information -->
+                            <div id="details">
+                                <h1 id="result-name">장미</h1>
+                                <!-- progress bar -->
+                                <div class="result-progress center">
+                                    <p><progress value="99" max="100"></progress>99%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="result-others">
+                <section id="section01" class="scroll">
+                    <div class="modal-container">
+                        <img src="data/image/hibiscus-rosa-sinensis.jpg" alt=""/>
+                        <div class="modal-content">
+                            <p>하와이 무궁화</p>
+                            <p><progress value="62" max="100"></progress>62%</p>
+                        </div>
+                    </div>
+                    <div class="modal-container">
+                        <img src="data/image/hibiscus-rosa-sinensis.jpg" alt=""/>
+                        <div class="modal-content">
+                            <p>2</p>
+                            <p><progress value="62" max="100"></progress>62%</p>
+                        </div>
+                    </div>
+                    <div class="modal-container">
+                        <img src="data/image/hibiscus-rosa-sinensis.jpg" alt=""/>
+                        <div class="modal-content">
+                            <p>3</p>
+                            <p><progress value="62" max="100"></progress>62%</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="section02" class="scroll">
+                    <div class="modal-container">
+                        <img src="data/image/hibiscus-rosa-sinensis.jpg" alt=""/>
+                        <div class="modal-content">
+                            <p>4</p>
+                            <p><progress value="62" max="100"></progress>62%</p>
+                        </div>
+                    </div>
+                    <div class="modal-container">
+                        <img src="data/image/hibiscus-rosa-sinensis.jpg" alt=""/>
+                        <div class="modal-content">
+                            <p>5</p>
+                            <p><progress value="62" max="100"></progress>62%</p>
+                        </div>
+                    </div>
+                    <div class="modal-container">
+                        <img src="data/image/hibiscus-rosa-sinensis.jpg" alt=""/>
+                        <div class="modal-content">
+                            <p>6</p>
+                            <p><progress value="62" max="100"></progress>62%</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="section03" class="scroll">
+                    <div class="modal-container">
+                        <img src="data/image/hibiscus-rosa-sinensis.jpg" alt=""/>
+                        <div class="modal-content">
+                            <p>7</p>
+                            <p><progress value="62" max="100"></progress>62%</p>
+                        </div>
+                    </div>
+                    <div class="modal-container">
+                        <img src="data/image/hibiscus-rosa-sinensis.jpg" alt=""/>
+                        <div class="modal-content">
+                            <p>8</p>
+                            <p><progress value="62" max="100"></progress>62%</p>
+                        </div>
+                    </div>
+                    <div class="modal-container">
+                        <img src="data/image/hibiscus-rosa-sinensis.jpg" alt=""/>
+                        <div class="modal-content">
+                            <p>9</p>
+                            <p><progress value="62" max="100"></progress>62%</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="section04" class="scroll">
+                    <div class="modal-container">
+                        <img src="data/image/hibiscus-rosa-sinensis.jpg" alt=""/>
+                        <div class="modal-content">
+                            <p>10</p>
+                            <p><progress value="62" max="100"></progress>62%</p>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </body>
+    <script src="lib/slideshow.js"></script>
+</html>
