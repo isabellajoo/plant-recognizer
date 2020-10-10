@@ -39,10 +39,16 @@ def Crawl(word):
     elem = browser.find_element_by_tag_name("body")
     imgCnt = 0
     while imgCnt < number*10:
-        elem.send_keys(Keys.PAGE_DOWN)
+        try:
+            button_class = browser.find_element_by_class_name('YstHxe')
+            button_class.find_element_by_class_name("mye4qd").click()
+            time.sleep(5)   
+        except:
+            elem.send_keys(Keys.PAGE_DOWN)
         rnd = random.random()
         time.sleep(rnd)
         imgCnt+=img4page
+        
 
     html = browser.page_source
     soup = BeautifulSoup(html,'html.parser')
@@ -86,7 +92,7 @@ else:
     print('---    Crawling Start    ---')
     for search in search_list:
         print('Search :', search)
-        Crawl(search.rstrip())
+        Crawl(search.rstrip() + ' 식물')
     print('---  Crawling Complete   ---')
 
 browser.close()
