@@ -4,6 +4,10 @@ var blur = document.getElementById('blur');
 var modal = document.getElementById('modal');
 var cancel = document.getElementById('cancel');
 
+var cropBoxData;
+var canvasData;
+var cropper;
+
 ;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
     dropArea.addEventListener(eventName, preventDefaults, false)
     document.body.addEventListener(eventName, preventDefaults, false)
@@ -56,11 +60,31 @@ function previewFile(file) {
 function popUp() {
     blur.classList.toggle('active');
     modal.classList.toggle('active');
+
+    cropper = new Cropper(imgpreview, {
+        autoCropArea: 0.5,
+        viewMode: 1,
+        center: true,
+        dragMode: 'move',
+        movable: true,
+        scalable: true,
+        guides: true,
+        zoomOnWheel: true,
+        cropBoxMovable: true,
+        wheelZoomRatio: 0.1,
+        ready: function () {
+            cropper.setCropBoxData(cropBoxData).setCanvasData(canvasData);
+        }
+    })
 }
 
 cancel.onclick = function() {
     blur.classList.toggle('active');
     modal.classList.toggle('active');
     imgpreview.src = '';
+
+    cropBoxData = cropper.getCropBoxData();
+    canvasData = cropper.getCanvasData();
+    cropper.destroy();
 }
 

@@ -1,28 +1,29 @@
-window.onload = function() {
+window.addEventListener('DOMContentLoaded', function () {
     var image = document.getElementById('img-preview');
     var cropBoxData;
     var canvasData;
     var cropper;
 
-    $('modal').on('shown.bs.modal', function() {
+    $('#modal').on('shown.bs.modal', function () {
+        $('#img-preview').cropper('destroy');
         cropper = new Cropper(image, {
             autoCropArea: 0.5,
-            ready: function() {
+            viewMode: 1,
+            center: true,
+            dragMode: 'move',
+            movable: true,
+            scalable: true,
+            guides: true,
+            zoomOnWheel: true,
+            cropBoxMovable: true,
+            wheelZoomRatio: 0.1,
+            ready: function () {
                 cropper.setCropBoxData(cropBoxData).setCanvasData(canvasData);
-            },
-            crop: function(e) {
-                console.log(e.detail.x);
-                console.log(e.detail.y);
-                console.log(e.detail.width);
-                console.log(e.detail.height);
-                console.log(e.detail.rotate);
-                console.log(e.detail.scaleX);
-                console.log(e.detail.scaleY);
             }
-        });
-    }).on('hidden.bs.modal', function() {
+        })
+    }).on('hidden.bs.modal', function () {
         cropBoxData = cropper.getCropBoxData();
         canvasData = cropper.getCanvasData();
-    });
-
-}
+        cropper.destroy();
+    })
+})
