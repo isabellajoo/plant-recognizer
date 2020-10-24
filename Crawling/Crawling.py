@@ -15,8 +15,8 @@ parser.add_argument("-s", "--suffix", help='keyword suffix')
 args = parser.parse_args()
 
 search = args.search
-prefix = args.prefix
-suffix = args.suffix
+prefix = args.prefix if args.prefix else ''
+suffix = args.suffix if args.suffix else ''
 number = int(args.number)
 
 base_folder = 'image/'
@@ -26,7 +26,7 @@ browser = webdriver.Chrome(webDriver)
 
 def Crawl(word):
     params ={
-        "q": prefix + ' ' + word + ' ' + suffix
+        "q": str(prefix) + ' ' + word + ' ' + str(suffix)
         ,"tbm":"isch"
         ,"sa":"1"
         ,"source":"lnms&tbm=isch"
