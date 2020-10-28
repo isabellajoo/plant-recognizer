@@ -62,16 +62,16 @@ function popUp() {
     modal.classList.toggle('active');
 
     cropper = new Cropper(imgpreview, {
+        autoCrop: true,
         autoCropArea: 0.5,
         viewMode: 1,
         center: true,
-        dragMode: 'move',
+        dragMode: 'none',
         movable: true,
         scalable: true,
         guides: true,
-        zoomOnWheel: true,
+        zoomable: false,
         cropBoxMovable: true,
-        wheelZoomRatio: 0.1,
         ready: function () {
             cropper.setCropBoxData(cropBoxData).setCanvasData(canvasData);
         }
@@ -83,8 +83,6 @@ cancel.onclick = function() {
     modal.classList.toggle('active');
     imgpreview.src = '';
 
-    cropBoxData = cropper.getCropBoxData();
-    canvasData = cropper.getCanvasData();
     cropper.destroy();
 }
 
