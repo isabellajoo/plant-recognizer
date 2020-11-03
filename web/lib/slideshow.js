@@ -1,7 +1,5 @@
 var slidePrev = document.getElementById("slide-prev");
 var slideNext = document.getElementById("slide-next");
-var scrollPrev = document.getElementById("scroll-prev");
-var scrollNext = document.getElementById("scroll-next");
 var dot_1 = document.getElementById("dot1");
 var dot_2 = document.getElementById("dot2");
 var dot_3 = document.getElementById("dot3");

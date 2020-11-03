@@ -67,7 +67,9 @@
             </div>
 
             <div id="result-others">
-                <section id="section01" class="scroll">
+                <!-- previous buttons -->
+                <a id="scroll-up">&#10094;</a>
+                <div id="scroll-container" class="scroll">
                     <div class="modal-container">
                         <img src="data/image/hibiscus-rosa-sinensis.jpg" alt=""/>
                         <div class="modal-content">
@@ -89,8 +91,6 @@
                             <p><progress value="62" max="100"></progress>62%</p>
                         </div>
                     </div>
-                </section>
-                <section id="section02" class="scroll">
                     <div class="modal-container">
                         <img src="data/image/hibiscus-rosa-sinensis.jpg" alt=""/>
                         <div class="modal-content">
@@ -112,8 +112,6 @@
                             <p><progress value="62" max="100"></progress>62%</p>
                         </div>
                     </div>
-                </section>
-                <section id="section03" class="scroll">
                     <div class="modal-container">
                         <img src="data/image/hibiscus-rosa-sinensis.jpg" alt=""/>
                         <div class="modal-content">
@@ -135,8 +133,6 @@
                             <p><progress value="62" max="100"></progress>62%</p>
                         </div>
                     </div>
-                </section>
-                <section id="section04" class="scroll">
                     <div class="modal-container">
                         <img src="data/image/hibiscus-rosa-sinensis.jpg" alt=""/>
                         <div class="modal-content">
@@ -144,10 +140,13 @@
                             <p><progress value="62" max="100"></progress>62%</p>
                         </div>
                     </div>
-
-                </section>
+                </div>
+                <!-- next buttons -->
+                <a id="scroll-down">&#10095;</a>
             </div>
         </div>
     </body>
-    <script src="lib/slideshow.js"></script>
+    <script type="text/javascript" src="lib/slideshow.js"></script>
+    <script type="text/javascript" src="lib/scroll.js"></script>
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.js"></script>
 </html>
