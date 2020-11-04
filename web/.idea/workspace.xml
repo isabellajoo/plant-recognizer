@@ -21,37 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="36fe22f4-cb59-4761-9e1c-bc0faa8903cb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/load.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/load.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/result.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/result.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/image/add_image_temp.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/add_image_temp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/image/basket-1846135_1920.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/basket-1846135_1920.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/image/daisy.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/daisy.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/image/hibiscus-rosa-sinensis.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/hibiscus-rosa-sinensis.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/image/hollyhock.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/hollyhock.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/image/lilium.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/lilium.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/image/load_temp.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/load_temp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/image/logo_temp.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/logo_temp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/image/nymphaeaceae.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/nymphaeaceae.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/image/return_image_temp.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/return_image_temp.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/image/rose_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/rose_1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/image/rose_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/rose_2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/image/rose_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/rose_3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/image/rose_4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/rose_4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/image/rose_5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/rose_5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/image/search_temp.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/search_temp.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/image/sunflower.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/sunflower.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/crop.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/crop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/dragdrop.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/dragdrop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/modal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/scroll.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scroll.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/slideshow.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/slideshow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/load.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/load.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/router/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/serve-static/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/serve-static/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/load.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/load.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/result-other.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/result-other.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/result.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/result.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +86,7 @@
       <workItem from="1602863725846" duration="2167000" />
       <workItem from="1603887843471" duration="2004000" />
       <workItem from="1604366208191" duration="3802000" />
-      <workItem from="1604486636637" duration="6501000" />
+      <workItem from="1604486636637" duration="8763000" />
     </task>
     <servers />
   </component>
