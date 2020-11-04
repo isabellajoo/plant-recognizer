@@ -21,10 +21,37 @@
   <component name="ChangeListManager">
     <list default="true" id="36fe22f4-cb59-4761-9e1c-bc0faa8903cb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/result.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/result.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/slideshow.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/slideshow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/result.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/load.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/load.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/result.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/result.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/image/add_image_temp.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/add_image_temp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/image/basket-1846135_1920.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/basket-1846135_1920.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/image/daisy.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/daisy.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/image/hibiscus-rosa-sinensis.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/hibiscus-rosa-sinensis.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/image/hollyhock.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/hollyhock.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/image/lilium.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/lilium.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/image/load_temp.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/load_temp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/image/logo_temp.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/logo_temp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/image/nymphaeaceae.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/nymphaeaceae.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/image/return_image_temp.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/return_image_temp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/image/rose_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/rose_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/image/rose_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/rose_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/image/rose_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/rose_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/image/rose_4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/rose_4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/image/rose_5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/rose_5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/image/search_temp.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/search_temp.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/image/sunflower.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/img/sunflower.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/crop.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/crop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/dragdrop.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/dragdrop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/scroll.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scroll.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/slideshow.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/slideshow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/load.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/load.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/router/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/result.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/result.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +85,16 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Downloads\capstone\plant-recognizer\web\public" />
+      <recent name="E:\Downloads\capstone\plant-recognizer\web\view" />
+      <recent name="E:\Downloads\capstone\plant-recognizer\web\router" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -75,7 +110,8 @@
       <workItem from="1602689089843" duration="2914000" />
       <workItem from="1602863725846" duration="2167000" />
       <workItem from="1603887843471" duration="2004000" />
-      <workItem from="1604366208191" duration="3175000" />
+      <workItem from="1604366208191" duration="3802000" />
+      <workItem from="1604486636637" duration="6501000" />
     </task>
     <servers />
   </component>
@@ -95,6 +131,22 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state width="861" height="282" key="GridCell.Tab.0.bottom" timestamp="1604500356269">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="861" height="282" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1604500356269" />
+    <state width="861" height="282" key="GridCell.Tab.0.center" timestamp="1604500356269">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="861" height="282" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1604500356269" />
+    <state width="861" height="282" key="GridCell.Tab.0.left" timestamp="1604500356269">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="861" height="282" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1604500356269" />
+    <state width="861" height="282" key="GridCell.Tab.0.right" timestamp="1604500356269">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="861" height="282" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1604500356269" />
     <state x="922" y="199" key="SettingsEditor" timestamp="1602864661868">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
