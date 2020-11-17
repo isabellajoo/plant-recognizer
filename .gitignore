@@ -2,7 +2,7 @@
 Crawling/image
 MachineLearning/image
 MachineLearning/model
-web/node_modules/@tensorflow
+web/node_modules/@tensorflow/
 
 MachineLearning/Categories.txt
 MachineLearning/label.txt
