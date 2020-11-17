@@ -10,7 +10,8 @@ module.exports = function(app, fs)
     });
     app.get('/result', function(req, res){
         res.render('result', {
-            length: 5
+            slide_len: 7,
+            result_len: 10,
         })
     });
 }

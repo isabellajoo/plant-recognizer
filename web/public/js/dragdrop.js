@@ -73,6 +73,7 @@ function popUp() {
         zoomable: false,
         cropBoxMovable: true,
         ready: function () {
+            console.log('cropper');
             cropper.setCropBoxData(cropBoxData).setCanvasData(canvasData);
         }
     })
@@ -81,7 +82,6 @@ function popUp() {
 cancel.onclick = function() {
     blur.classList.toggle('active');
     modal.classList.toggle('active');
-    imgpreview.src = '';
 
     cropper.destroy();
 }
