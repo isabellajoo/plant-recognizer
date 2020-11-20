@@ -11,25 +11,24 @@ const demo = async () => {
 
     /* model loading */
     const model = await tf.loadLayersModel('https://storage.googleapis.com/plant-recognizer/model_v2/model3.json');
-
+    console.log('Successfully loaded model')
     /* model prediction with set image size */
-    model.predict(tf.zeros([null, IMAGE_SIZE, IMAGE_SIZE, 3])).dispose();
-
+    //model.predict(tf.zeros([null, IMAGE_SIZE, IMAGE_SIZE, 3])).dispose();
     status('');
 
     const image = document.getElementById('img-preview');
     if (image.complete && image.naturalHeight !== 0) {
-        await predict(image);
+        await predict(model, image);
     } else {
         image.onload = () => {
-            predict(image);
+            predict(model, image);
         }
     }
 };
 
 
 /* model predict and time calculating */
-async function predict(imgElement) {
+async function predict(model, imgElement) {
     status('Predicting...');
 
     const startTime1 = performance.now();
@@ -40,11 +39,15 @@ async function predict(imgElement) {
 
         const offset = tf.scalar(127.5);
         const normalized = img.sub(offset).div(offset);
-
-        const batched = normalized.reshape([1, IMAGE_SIZE, IMAGE_SIZE, 3]);
-
+        
+        const batched = tf.image.resizeBilinear(
+            normalized,
+            [IMAGE_SIZE, IMAGE_SIZE],
+            false
+          ).expandDims(0);
+        console.log(batched.shape);
         startTime2 = performance.now();
-
+        
         return model.predict(batched);
     });
 
