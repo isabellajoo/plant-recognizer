@@ -7,48 +7,49 @@
         <title>Plant Recognizer</title>
     </head>
     <body>
-    <div class="container center" id="blur">
-        <!-- logo -->
-        <%- include('logo') %>
+        <div class="container center" id="blur">
+            <!-- logo -->
+            <%- include('logo') %>
 
-        <!-- img upload -->
-        <div>
-            <form class="my-form" id="img-upload">
-                <label class="button center" id="drop-area">
-                    <input type="file" name="file" id="file-upload" accept="image/*" onchange="handleFiles(this.files)">
-                    <img id="add-img" src="img/add_image_temp.png" alt=""/>
-                    <br/>
-                    검색할 식물의 사진을 올려놓거나 눌러서 업로드하세요
-                </label>
-            </form>
+            <!-- img upload -->
+            <div>
+                <form class="my-form" id="img-upload">
+                    <label class="button center" id="drop-area">
+                        <input type="file" name="file" id="file-upload" accept="image/*" onchange="handleFiles(this.files)">
+                        <img id="add-img" src="img/add_image_temp.png" alt=""/>
+                        <br/>
+                        검색할 식물의 사진을 올려놓거나 눌러서 업로드하세요
+                    </label>
+                </form>
+            </div>
         </div>
-    </div>
 
-    <!-- modal -->
-    <div class="modal fade" id="modal">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalLabel">검색할 영역을 선택하세요</h5>
-                </div>
-                <div class="modal-body center">
-                    <div class="img-container">
-                        <img id="img-preview" src="" alt="">
-                        <div id="status"></div>
-                        <div id="predictions"></div>
+        <!-- modal -->
+        <div class="modal fade" id="modal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel">검색할 영역을 선택하세요</h5>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn">완료</button>
-                    <button id="cancel" type="button" class="btn" data-dismiss="modal">취소</button>
+                    <div class="modal-body center">
+                        <div class="img-container">
+                            <img id="img-preview" src="" alt="">
+                            <div id="status"></div>
+                            <div id="predictions"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="done" type="button" class="btn">완료</button>
+                        <button id="cancel" type="button" class="btn" data-dismiss="modal">취소</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </body>
     <script type="text/javascript" src="js/dragdrop.js"></script>
-    <script type="file" src="js/ml.js"></script>
+    <script type="module" src="js/ml.js"></script>
     <script src="../scripts/cropperjs/dist/cropper.js"></script>
-    <!-- not used -->
-    <script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+    <!-- not used
+    <script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>-->
 </html>
