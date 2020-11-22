@@ -1,12 +1,13 @@
-var dropArea = document.getElementById('drop-area');
-var imgpreview = document.getElementById('img-preview');
-var blur = document.getElementById('blur');
-var modal = document.getElementById('modal');
-var cancel = document.getElementById('cancel');
+const dropArea = document.getElementById('drop-area');
+const imgpreview = document.getElementById('img-preview');
+const blur = document.getElementById('blur');
+const modal = document.getElementById('modal');
+const cancel = document.getElementById('cancel');
 
-var cropBoxData;
-var canvasData;
-var cropper;
+
+let cropBoxData;
+let canvasData;
+let cropper;
 
 ;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
     dropArea.addEventListener(eventName, preventDefaults, false)
@@ -49,9 +50,9 @@ function handleFiles(files) {
 }
 
 function previewFile(file) {
-    let reader = new FileReader();
+    var reader = new FileReader();
     reader.readAsDataURL(file);
-    reader.onloadend = function() {
+    reader.onload = function() {
         imgpreview.src = reader.result;
         popUp();
     }
@@ -85,4 +86,5 @@ cancel.onclick = function() {
 
     cropper.destroy();
 }
+
 

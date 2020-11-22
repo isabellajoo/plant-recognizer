@@ -4,10 +4,12 @@ module.exports = function(app, fs)
         res.render('home', {
         });
     });
+    /*
     app.get('/load', function(req, res){
         res.render('load', {
         });
     });
+     */
     app.get('/result', function(req, res){
         res.render('result', {
             slide_len: 7,

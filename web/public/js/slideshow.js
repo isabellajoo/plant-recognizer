@@ -1,43 +1,48 @@
-var slidePrev = document.getElementById("slide-prev");
-var slideNext = document.getElementById("slide-next");
-var dot_1 = document.getElementById("dot1");
-var dot_2 = document.getElementById("dot2");
-var dot_3 = document.getElementById("dot3");
+const slidePrev = document.getElementById("slide-prev");
+const slideNext = document.getElementById("slide-next");
+const dot_1 = document.getElementById("dot1");
+const dot_2 = document.getElementById("dot2");
+const dot_3 = document.getElementById("dot3");
 
-var slideIndex = 1;
+let slideIndex = 1;
 showSlides(slideIndex);
 
-slidePrev.onclick = function() {
+slidePrev.onclick = function () {
     plusSlides(-1);
 }
-slideNext.onclick = function() {
+slideNext.onclick = function () {
     plusSlides(1);
 }
 
-dot_1.onclick = function() {
+dot_1.onclick = function () {
     currentSlide(1);
 }
-dot_2.onclick = function() {
+dot_2.onclick = function () {
     currentSlide(2);
 }
-dot_3.onclick = function() {
+dot_3.onclick = function () {
     currentSlide(3);
 }
 
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }
+
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
 function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("slide");
-    var dots = document.getElementsByClassName("dot");
+    let i;
+    const slides = document.getElementsByClassName("slide");
+    const dots = document.getElementsByClassName("dot");
 
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
+    if (n > slides.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
 
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
