@@ -2,7 +2,6 @@ import {PLANT_LIST} from './plantlist.js';
 
 const predictionsElement = document.getElementById('predictions');
 const done = document.getElementById('done');
-const imgpreview = document.getElementById('img-preview');
 const imgcropped = document.getElementById('img-cropped');
 
 const IMAGE_SIZE = 300;
@@ -128,15 +127,14 @@ const demoStatusElement = document.getElementById('status');
 const status = msg => demoStatusElement.innerText = msg;
 */
 
+/*
 function cropImage() {
     var img = document.createElement("img");
-    img.src = cropper.getCroppedCanvas().toDataURL();
+    img.src =
     console.log(img.src);
 
     var canvas = document.createElement("canvas");
     canvas.getContext("2d").drawImage(img, 0, 0);
-
-    console.log(canvas);
 
     var MAX_WIDTH = IMAGE_SIZE;
     var MAX_HEIGHT = IMAGE_SIZE;
@@ -160,16 +158,30 @@ function cropImage() {
     canvas.getContext("2d").drawImage(img, 0, 0, width, height);
     console.log(canvas);
 
-    imgcropped.src = canvas.toDataURL('image');
-}
 
-/* execute */
+    var dataURL = img.src;
+    var byteString = atob(dataURL.split(',')[1]);
+    var mimeString = dataURL.split(',')[0].split(':')[1].split(';')[0];
+    var ab = new ArrayBuffer(byteString.length);
+    var ia = new Uint8Array(ab);
+    for (var i = 0; i < byteString.length; i++) {
+        ia[i] = byteString.charCodeAt(i);
+    }
+
+    imgcropped.src = new Blob([ab], {type: mimeString});
+}
+*/
+
 done.addEventListener('click', (e) => {
     console.log('done...');
-    /* image crop */
-    imgcropped.src = cropper.getCroppedCanvas({
-        width: IMAGE_SIZE
+
+    var newSrc = cropper.getCroppedCanvas({
+        maxWidth: 300,
+        maxHeight: 300
     }).toDataURL();
 
-    demo(imgcropped);
+    imgcropped.src = newSrc;
+    window.localStorage.setItem("imgcropped", newSrc);
+
+    //demo();
 })

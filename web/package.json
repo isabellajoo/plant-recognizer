@@ -21,7 +21,8 @@
     "sharp": "^0.26.1"
   },
   "devDependencies": {
-    "@google-cloud/storage": "^5.5.0"
+    "@google-cloud/storage": "^5.5.0",
+    "@tensorflow/tfjs-converter": "^2.7.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

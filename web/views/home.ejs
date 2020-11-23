@@ -34,12 +34,12 @@
                     <div class="modal-body center">
                         <div class="img-container">
                             <img id="img-preview" src="" alt="">
-                            <img id="img-cropped" src=""  alt="">
-                            <div id="predictions"></div>
                         </div>
+                        <img id="img-cropped" src="" alt="">
+                        <div id="predictions"></div>
                     </div>
                     <div class="modal-footer">
-                        <button id="done" type="button" class="btn">완료</button>
+                        <a href="/result"><button id="done" type="button" class="btn">완료</button></a>
                         <a href="/"><button id="cancel" type="button" class="btn" data-dismiss="modal">취소</button></a>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
         </div>
     </body>
     <script type="text/javascript" src="js/dragdrop.js"></script>
-    //<script type="module" src="js/ml.js"></script>
+    <script type="module" src="js/ml.js"></script>
     <script src="../scripts/cropperjs/dist/cropper.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
     <!-- not used

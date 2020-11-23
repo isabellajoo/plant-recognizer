@@ -3,7 +3,7 @@ const imgpreview = document.getElementById('img-preview');
 const blur = document.getElementById('blur');
 const modal = document.getElementById('modal');
 const cancel = document.getElementById('cancel');
-
+const imgcropped = document.getElementById('img-cropped');
 
 let cropBoxData;
 let canvasData;
@@ -58,6 +58,8 @@ function previewFile(file) {
     }
 }
 
+
+
 function popUp() {
     blur.classList.toggle('active');
     modal.classList.toggle('active');
@@ -85,6 +87,7 @@ cancel.onclick = function() {
     modal.classList.toggle('active');
 
     cropper.destroy();
+    cropper = null;
 }
 
 

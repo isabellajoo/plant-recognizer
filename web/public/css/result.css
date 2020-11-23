@@ -85,6 +85,7 @@ html, body {
 }
 #img-search {
     opacity: 1;
+    object-fit: cover;
     cursor: pointer;
     position: relative;
     border-radius: 50%;

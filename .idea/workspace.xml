@@ -20,46 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30fc2966-7ef6-436d-a304-28db03633308" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/plant-recognizer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/plant-recognizer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/web/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/node_modules/@tensorflow/tfjs-converter/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/node_modules/@tensorflow/tfjs-converter/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/public/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/css/home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/public/css/result.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/css/result.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/img/return_image_temp.png" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/img/return_image_temp.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/public/js/dragdrop.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/js/dragdrop.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/public/js/ml.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/js/ml.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/js/slideshow.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/js/slideshow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/model_v2/group1-shard10of25.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/model_v2/group1-shard11of25.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/model_v2/group1-shard12of25.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/model_v2/group1-shard13of25.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/model_v2/group1-shard14of25.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/model_v2/group1-shard15of25.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/model_v2/group1-shard16of25.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/model_v2/group1-shard17of25.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/model_v2/group1-shard18of25.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/model_v2/group1-shard19of25.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/model_v2/group1-shard1of25.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/model_v2/group1-shard20of25.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/model_v2/group1-shard21of25.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/model_v2/group1-shard22of25.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/model_v2/group1-shard23of25.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/model_v2/group1-shard24of25.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/model_v2/group1-shard25of25.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/model_v2/group1-shard2of25.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/model_v2/group1-shard3of25.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/model_v2/group1-shard4of25.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/model_v2/group1-shard5of25.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/model_v2/group1-shard6of25.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/model_v2/group1-shard7of25.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/model_v2/group1-shard8of25.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/model_v2/group1-shard9of25.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/model_v2/model.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/model_v2/model2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/model_v2/model3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/router/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/router/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/home.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views/logo.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/logo.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/views/result.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/result.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -135,7 +105,8 @@
       <workItem from="1601911026101" duration="3186000" />
       <workItem from="1601989990708" duration="5588000" />
       <workItem from="1602069067450" duration="1800000" />
-      <workItem from="1606041479474" duration="15913000" />
+      <workItem from="1606041479474" duration="18229000" />
+      <workItem from="1606116360010" duration="14546000" />
     </task>
     <servers />
   </component>

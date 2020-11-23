@@ -15,7 +15,7 @@
 
         <!-- search img -->
         <div id="retry">
-            <img id="img-search" src="img/search_temp.jpg" alt=""/>
+            <img id="img-search" src="" alt=""/>
             <a href="/"><img id="img-return" src="img/return_image_temp.png" alt=""/></a>
         </div>
 
@@ -72,6 +72,10 @@
             for (var i = 0;i < load.length;i += 1) {
                 load[i].style.display = 'none';
             }
+
+            if(window.localStorage.getItem("imgcropped") !== null) {
+                document.getElementById('img-search').src = window.localStorage.getItem("imgcropped");
+            }
         });
     </script>
 
@@ -79,4 +83,5 @@
     <script type="text/javascript" src="js/scroll.js"></script>
     <script type="module" src="js/ml.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter@2.7.0/dist/tf-converter.min.js"></script>
 </html>
