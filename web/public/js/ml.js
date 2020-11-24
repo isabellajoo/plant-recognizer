@@ -183,5 +183,5 @@ done.addEventListener('click', (e) => {
     imgcropped.src = newSrc;
     window.localStorage.setItem("imgcropped", newSrc);
 
-    //demo();
+    demo(imgcropped);
 })
