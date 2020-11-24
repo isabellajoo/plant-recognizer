@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Plant Recognizer</title>
+        <link rel="stylesheet" href="css/result.css">
+    </head>
+    <body>
+        <div class="loading">
+            <div class="loader center"></div>
+        </div>
+
+        <!-- logo -->
+        <%- include('logo') %>
+
+        <!-- search img -->
+        <div id="retry">
+            <img id="img-search" src="" alt=""/>
+            <a href="/"><img id="img-return" src="img/return_image_temp.png" alt=""/></a>
+        </div>
+
+        <div id="main">
+            <div id="result">
+                <div id="result-main">
+                    <div id="result-container01">
+                        <div id="slide-container">
+                            <!-- previous buttons -->
+                            <a id="slide-prev">&#10094;</a>
+
+                            <!-- slideshow container of result img -->
+                            <div id="slideshow">
+                                <%- include('slideImage') %>
+                            </div>
+
+                            <!-- next buttons -->
+                            <a id="slide-next">&#10095;</a>
+                        </div>
+                    </div>
+
+                    <div id="result-container02">
+                        <div id="result-info">
+                            <!-- dots -->
+                            <%- include('slideDot') %>
+
+                            <!-- result plant information -->
+                            <div id="details">
+                                <h1 id="result-name">장미</h1>
+                                <!-- progress bar -->
+                                <div class="result-progress center">
+                                    <p><progress value="99" max="100"></progress>99%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="result-others">
+                <!-- previous buttons -->
+                <a id="scroll-up">&#10094;</a>
+                <div id="scroll-container" class="scroll">
+                    <%- include('resultOther') %>
+                </div>
+                <!-- next buttons -->
+                <a id="scroll-down">&#10095;</a>
+            </div>
+        </div>
+    </body>
+    <script>
+        window.addEventListener('load', function() {
+            var load = document.getElementsByClassName('loading');
+            for (var i = 0;i < load.length;i += 1) {
+                load[i].style.display = 'none';
+            }
+
+            if(window.localStorage.getItem("imgcropped") !== null) {
+                document.getElementById('img-search').src = window.localStorage.getItem("imgcropped");
+            }
+        });
+    </script>
+
+    <script type="text/javascript" src="js/slideshow.js"></script>
+    <script type="text/javascript" src="js/scroll.js"></script>
+    <script type="module" src="js/ml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter@2.7.0/dist/tf-converter.min.js"></script>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/home.css">
+        <link rel="stylesheet" href="../scripts/cropperjs/dist/cropper.css">
+        <title>Plant Recognizer</title>
+        <style>
+            @import url(//fonts.googleapis.com/earlyaccess/hanna.css);
+        </style>
+    </head>
+    <body>
+        <div class="container center" id="blur">
+            <!-- logo -->
+            <%- include('logo') %>
+
+            <!-- img upload -->
+            <div id="main">
+                <form class="my-form" id="img-upload">
+                    <label class="button center" id="drop-area">
+                        <input type="file" name="file" id="file-upload" accept="image/*" onchange="handleFiles(this.files)">
+                        <img id="add-img" src="img/add_image.png" alt=""/>
+                        <p id="add-txt">식물의 사진을 올려놓거나 눌러서 업로드하세요</p>
+                    </label>
+                </form>
+            </div>
+        </div>
+
+        <!-- modal -->
+        <div class="modal fade" id="modal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <p class="center" id="modal-txt">검색할 영역을 선택하세요</p>
+                    </div>
+                    <div class="modal-body center">
+                        <div class="img-container">
+                            <img id="img-preview" src="" alt="">
+                        </div>
+                        <img id="img-cropped" src="" alt="">
+                        <div id="predictions"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="done" type="button" class="btn">완료</button>
+                        <a href="/"><button id="cancel" type="button" class="btn" data-dismiss="modal">취소</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="js/dragdrop.js"></script>
+    <script type="module" src="js/ml.js"></script>
+    <script src="../scripts/cropperjs/dist/cropper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+</html>

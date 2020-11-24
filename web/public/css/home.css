@@ -1,0 +1,224 @@
+html, body {
+    overflow: auto;
+    -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+    display: none !important;
+}
+
+#main {
+    padding-bottom: 20px;
+}
+
+#logo-img {
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+
+#add-img {
+    margin-top: 100px;
+    width: 100px;
+    height: 100px;
+}
+
+#add-txt {
+    font-family: 'Jeju Gothic', sans-serif;
+    color: #ffffff;
+}
+
+/*
+ * ====================================================================================
+ * blur
+ * ====================================================================================
+ */
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.container .my-form {
+    position: relative;
+}
+
+.container#blur.active {
+    filter: blur(10px);
+    pointer-events: none;
+    user-select: none;
+}
+
+/*
+ * ====================================================================================
+ * file upload
+ * ====================================================================================
+ */
+#drop-area {
+    position: relative;
+    border-radius: 20px;
+    width: 50%;
+    height: 60vh;
+    margin: 100px auto;
+    padding: 20px;
+    min-font-size: 11px;
+    font-size: 1.5vw;
+}
+
+#drop-area.highlight {
+    border-color: #f8a986;
+}
+
+.my-form {
+    margin-bottom: 10px;
+}
+#gallery {
+    margin-top: 10px;
+}
+#gallery img {
+    width: 150px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.button {
+    border: 2px dashed #7fdcc7;
+    display: inline-block;
+    padding: 10px;
+    background: #7fdcc7;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.button:hover {
+    background: #7fdcc7;
+    border: 2px dashed #f8a986;
+}
+#file-upload {
+    display: none;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.btn {
+    margin: 10px;
+    padding: 8px 15px 8px 15px;
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    float: right;
+    font-family: 'Jeju Gothic', sans-serif;
+    font-size: 1.5vh;
+    box-shadow: 2px 2px 1px rgba(70, 70, 70, 0.5);
+}
+
+.btn:hover,
+.btn:focus {
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    background-color: #7fdcc7;
+}
+
+/*
+ * ====================================================================================
+ * modal
+ * ====================================================================================
+ */
+#modal {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    height: auto;
+    overflow: hidden;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+    background-color: #fefefe;
+    border-radius: 20px;
+}
+
+#modal-txt {
+    font-size: 1.5vw;
+    font-family: 'Jeju Gothic', sans-serif;
+    color: #ffffff;
+}
+
+#modal.active {
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.modal-dialog {
+    position: relative;
+    width: auto;
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: .3rem;
+    outline: 0;
+}
+
+.modal-header {
+    background-color: #f8a986;
+    display: flex;
+    align-items: flex-start;;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #f69365;
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+}
+
+.modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+    max-height: 60vh;
+}
+
+.modal-footer {
+    background-color: #f8a986;
+    border-bottom: 1px solid #f69365;
+    padding: 1rem 1rem;
+}
+
+.img-container img {
+    max-width: 60vw;
+    max-height: 60vh;
+}
+
+#img-preview {
+    display: block;
+    max-width: 100%;
+    vertical-align: middle;
+    border-style: none;
+}
+
+#img-cropped {
+    display: none;
+}
+
+.close:hover,
+.close:focus {
+    cursor: pointer;
+    outline: none;
+}
