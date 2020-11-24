@@ -14,6 +14,7 @@ module.exports = function(app, fs)
         res.render('result', {
             slide_len: 7,
             result_len: 10,
+            progress: 50
         });
     });
 }

@@ -22,8 +22,13 @@
     <list default="true" id="36fe22f4-cb59-4761-9e1c-bc0faa8903cb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/dragdrop.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/dragdrop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/ml.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/ml.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/plantlist.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/plantlist.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/scroll.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scroll.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/router/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/result.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/result.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
