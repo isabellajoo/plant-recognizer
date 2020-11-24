@@ -1,11 +1,10 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-//var session = require('express-session');
 const fs = require('fs');
-
-//const mysql      = require('mysql');
-//const connection = mysql.createConnection(dbconfig);
+const mysql = require('mysql');
+const dbconfig = require('config/database.js');
+const connection = mysql.createConnection(dbconfig);
 
 app.use(express.static('public'));
 app.use('/scripts', express.static('node_modules'));
