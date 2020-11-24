@@ -4,6 +4,9 @@ const app = express();
 //var session = require('express-session');
 const fs = require('fs');
 
+//const mysql      = require('mysql');
+//const connection = mysql.createConnection(dbconfig);
+
 app.use(express.static('public'));
 app.use('/scripts', express.static('node_modules'));
 app.use(cors({

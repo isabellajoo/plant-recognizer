@@ -39,8 +39,8 @@ async function predict(model, imgElement) {
     const logits = tf.tidy(() => {
         const img = tf.browser.fromPixels(imgElement).toFloat();
 
-        const offset = tf.scalar(127.5);
-        const normalized = img.sub(offset).div(offset);
+        const offset = tf.scalar(255);
+        const normalized = img.div(offset);
         
         const batched = tf.image.resizeBilinear(
             normalized,
@@ -68,7 +68,7 @@ export async function getTopKClasses(logits, topK) {
 
     const valuesAndIndices = [];
     for (let i = 0; i < values.length; i++) {
-        valuesAndIndices.push({value: values[i], index: i});
+        valuesAndIndices.push({value: values[i], index: i + 1});
     }
     valuesAndIndices.sort((a, b) => {
         return b.value - a.value;

@@ -5,6 +5,9 @@
         <link rel="stylesheet" href="css/home.css">
         <link rel="stylesheet" href="../scripts/cropperjs/dist/cropper.css">
         <title>Plant Recognizer</title>
+        <style>
+            @import url(//fonts.googleapis.com/earlyaccess/hanna.css);
+        </style>
     </head>
     <body>
         <div class="container center" id="blur">
@@ -12,13 +15,12 @@
             <%- include('logo') %>
 
             <!-- img upload -->
-            <div>
+            <div id="main">
                 <form class="my-form" id="img-upload">
                     <label class="button center" id="drop-area">
                         <input type="file" name="file" id="file-upload" accept="image/*" onchange="handleFiles(this.files)">
-                        <img id="add-img" src="img/add_image_temp.png" alt=""/>
-                        <br/>
-                        검색할 식물의 사진을 올려놓거나 눌러서 업로드하세요
+                        <img id="add-img" src="img/add_image.png" alt=""/>
+                        <p id="add-txt">식물의 사진을 올려놓거나 눌러서 업로드하세요</p>
                     </label>
                 </form>
             </div>
@@ -29,7 +31,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="modalLabel">검색할 영역을 선택하세요</h5>
+                        <p class="center" id="modal-txt">검색할 영역을 선택하세요</p>
                     </div>
                     <div class="modal-body center">
                         <div class="img-container">
@@ -50,6 +52,4 @@
     <script type="module" src="js/ml.js"></script>
     <script src="../scripts/cropperjs/dist/cropper.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
-    <!-- not used
-    <script type="text/javascript" src="../node_modules/jquery/dist/jquery.js"></script>-->
 </html>

@@ -90,4 +90,16 @@ cancel.onclick = function() {
     cropper = null;
 }
 
+window.onclick = function(e) {
+    var isClickInside = modal.contains(e.target);
+
+    if (!isClickInside) {
+        blur.classList.toggle('active');
+        modal.classList.toggle('active');
+    }
+
+    cropper.destroy();
+    cropper = null;
+}
+
 
