@@ -51,7 +51,7 @@ async function predict(model, imgElement) {
 }
 
 /* Find Top n classes */
-export async function getTopKClasses(logits, topK) {
+async function getTopKClasses(logits, topK) {
     const values = await logits.data();
 
     const valuesAndIndices = [];
@@ -127,51 +127,6 @@ const demoStatusElement = document.getElementById('status');
 const status = msg => demoStatusElement.innerText = msg;
 */
 
-/*
-function cropImage() {
-    var img = document.createElement("img");
-    img.src =
-    console.log(img.src);
-
-    var canvas = document.createElement("canvas");
-    canvas.getContext("2d").drawImage(img, 0, 0);
-
-    var MAX_WIDTH = IMAGE_SIZE;
-    var MAX_HEIGHT = IMAGE_SIZE;
-    var width = imgpreview.width;
-    var height = imgpreview.height;
-    console.log('width:'+width+' height:'+height);
-
-    if (width > height) {
-        if (width > MAX_WIDTH) {
-            height *= MAX_WIDTH / width;
-            width = MAX_WIDTH;
-        }
-    } else {
-        if (height > MAX_HEIGHT) {
-            width *= MAX_HEIGHT / height;
-            height = MAX_HEIGHT;
-        }
-    }
-    canvas.width = width;
-    canvas.height = height;
-    canvas.getContext("2d").drawImage(img, 0, 0, width, height);
-    console.log(canvas);
-
-
-    var dataURL = img.src;
-    var byteString = atob(dataURL.split(',')[1]);
-    var mimeString = dataURL.split(',')[0].split(':')[1].split(';')[0];
-    var ab = new ArrayBuffer(byteString.length);
-    var ia = new Uint8Array(ab);
-    for (var i = 0; i < byteString.length; i++) {
-        ia[i] = byteString.charCodeAt(i);
-    }
-
-    imgcropped.src = new Blob([ab], {type: mimeString});
-}
-*/
-
 done.addEventListener('click', (e) => {
     console.log('done...');
 
@@ -186,5 +141,5 @@ done.addEventListener('click', (e) => {
     var index = [];
     index = demo(imgcropped);
 
-    exports.topkIndices = index;
+    exports.topkIndices = {index: index};
 })

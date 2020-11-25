@@ -210,8 +210,11 @@ html, body {
     width: 350px;
     height: 300px;
 }
-#result-name {
-    margin: 0;
+.result-name {
+    font-family: 'Jeju Gothic', sans-serif;
+}
+.progress-txt {
+    font-family: 'Jeju Gothic', sans-serif;
 }
 
 /*

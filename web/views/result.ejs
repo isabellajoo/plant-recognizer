@@ -4,6 +4,9 @@
         <meta charset="utf-8">
         <title>Plant Recognizer</title>
         <link rel="stylesheet" href="css/result.css">
+        <style>
+            @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+        </style>
     </head>
     <body>
         <div class="loading">
@@ -44,10 +47,10 @@
 
                             <!-- result plant information -->
                             <div id="details">
-                                <h1 id="result-name">장미</h1>
+                                <h1 class="result-name">장미</h1>
                                 <!-- progress bar -->
                                 <div class="result-progress center">
-                                    <p><progress value="<%= progress %>" max="100"></progress>99%</p>
+                                    <p class="progress-txt"><progress value="<%= progress %>" max="100"></progress>99%</p>
                                 </div>
                             </div>
                         </div>
