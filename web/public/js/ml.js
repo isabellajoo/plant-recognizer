@@ -1,14 +1,10 @@
 //import {PLANT_LIST} from './plantlist.js';
 
-const predictionsElement = document.getElementById('predictions');
-const done = document.getElementById('done');
-const imgcropped = document.getElementById('img-cropped');
-
 const IMAGE_SIZE = 300;
 const TOPK_PREDICTIONS = 11;
 
 /* model execute */
-const demo = async (image) => {
+exports.demo = async (image) => {
     /* model loading */
     const model = await tf.loadLayersModel('https://storage.googleapis.com/plant-recognizer/model_70/model_2.json');
     console.log('Successfully loaded model')
@@ -127,19 +123,3 @@ const demoStatusElement = document.getElementById('status');
 const status = msg => demoStatusElement.innerText = msg;
 */
 
-done.addEventListener('click', (e) => {
-    console.log('done...');
-
-    var newSrc = cropper.getCroppedCanvas({
-        maxWidth: 300,
-        maxHeight: 300
-    }).toDataURL();
-
-    imgcropped.src = newSrc;
-    window.localStorage.setItem("imgcropped", newSrc);
-
-    var index = [];
-    index = demo(imgcropped);
-
-    exports.topkIndices = {index: index};
-})

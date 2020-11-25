@@ -1,8 +1,21 @@
-var dbConObj = require('../../config/database.js');
-var dbconn = dbConObj.init();
-const fs = require('fs');
-const ejs = require('ejs');
+const mysql = require('mysql');
+const dbconfig = require('../../config/database.js');
+const connection = mysql.createConnection(dbconfig);
+const done = require('../js/done.js');
 
+var index = [];
+index = done.getIdxArr();
+
+connection.connect();
+
+connection.query('SELECT * FROM plants_newlist WHERE idx=' + index[0], (error, rows) => {
+    if (error) throw error;
+    console.log('Plant list\n', rows);
+});
+
+connection.end();
+
+/*
 module.exports = function() {
     var plantList = {
         list: function(req, res) {
@@ -16,3 +29,4 @@ module.exports = function() {
         }
     };
 }
+ */
