@@ -22,6 +22,16 @@ export default async function demo(image){
          */
     }
 
+    localStorage.setItem("key", JSON.stringify(index));
+
+    /*
+    var jsonEncode = JSON.stringify(index);
+    alert(jsonEncode);
+
+    var jsonDecode = JSON.parse(jsonEncode);
+    alert(jsonDecode[0].className + ' ' + jsonDecode[0].probability);
+    */
+
     console.log(index);
     return index;
 }
@@ -61,28 +71,28 @@ async function getTopKClasses(logits, topK) {
     });
 
     var sum = 0;
-    //const topkValues = [];
-    const topkIndices = [];
+    const topClassesAndProbs = [];
     for (let i = 0; i < topK; i++) {
         if (i === 0 || sum < 1) {
-            //topkValues[i] = valuesAndIndices[i].value;
-            topkIndices[i] = valuesAndIndices[i].index;
+            topClassesAndProbs.push({
+                classIndex: valuesAndIndices[i].index,
+                probability: valuesAndIndices[i].value
+            });
             sum += valuesAndIndices[i].value;
+
             console.log(sum);
         }
     }
 
     /*
-    const topClassesAndProbs = [];
     for (let i = 0; i < topkIndices.length; i++) {
         topClassesAndProbs.push({
-            className: PLANT_LIST[topkIndices[i]],
+            className: topkIndices[i],
             probability: topkValues[i]
         })
-    }
     */
-    console.log('topkIndices:' + topkIndices);
-    return topkIndices;
+
+    return topClassesAndProbs;
 }
 
 /*

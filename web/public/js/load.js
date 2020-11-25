@@ -4,19 +4,25 @@
 //const done = require('../js/done.js');
 import demo from "./ml.js";
 
-module.exports = async function loadML() {
-    var result = [];
+async function loadML() {
+    //var result = [];
     try {
         if(window.localStorage.getItem("imgcropped") !== null) {
             var image = document.getElementById('img-load');
-            result = await demo(image);
+            await demo(image);
+
+            /*
+            console.log('result: ' + result);
 
             return result;
+            */
         }
     } catch (e) {
         console.log('ML load error: ' + e);
     }
 }
+
+loadML();
 
 /*
 async function dbConn(arr) {

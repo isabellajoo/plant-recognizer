@@ -5,7 +5,7 @@ const fs = require('fs');
 const mysql = require('mysql');
 const dbconfig = require('./config/database.js');
 const connection = mysql.createConnection(dbconfig);
-//const loadML = require('./public/js/load.js');
+
 
 app.use(express.static('public'));
 app.use('/scripts', express.static('node_modules'));
@@ -28,12 +28,17 @@ app.get('/', function(req, res){
 
 app.get('/load', function(req, res){
     res.render('load', {
+
     });
-    //loadML();
 });
 
 app.get('/result', function(req, res){
-    connection.query('SELECT * FROM plants_newlist WHERE idx=70', (error, rows) => {
+    if(localStorage.getItem("key") !== null) {
+        var result = JSON.parse(localStorage.getItem("key"));
+    } else {
+        console.log('null');
+    }
+    connection.query('SELECT * FROM plants_newlist WHERE idx=' + result.classIndex[0], (error, rows) => {
         if (error) {
             console.log(error);
             throw error;
