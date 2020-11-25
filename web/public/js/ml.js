@@ -4,7 +4,7 @@ const IMAGE_SIZE = 300;
 const TOPK_PREDICTIONS = 11;
 
 /* model execute */
-exports.demo = async (image) => {
+export default async function demo(image){
     /* model loading */
     const model = await tf.loadLayersModel('https://storage.googleapis.com/plant-recognizer/model_70/model_2.json');
     console.log('Successfully loaded model')
@@ -20,8 +20,7 @@ exports.demo = async (image) => {
     }
 
     return index;
-};
-
+}
 
 /* model predict and time calculating */
 async function predict(model, imgElement) {
@@ -122,4 +121,3 @@ const demoStatusElement = document.getElementById('status');
 /* status message print
 const status = msg => demoStatusElement.innerText = msg;
 */
-
