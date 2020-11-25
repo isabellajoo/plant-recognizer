@@ -1,19 +1,23 @@
 const mysql = require('mysql');
 const dbconfig = require('../../config/database.js');
 const connection = mysql.createConnection(dbconfig);
-const done = require('../js/done.js');
+import loadML from "./load.js";
 
-var index = [];
-index = done.getIdxArr();
+var array = [];
+array = loadML();
 
-connection.connect();
+async function dbConn(arr) {
+    connection.connect();
 
-connection.query('SELECT * FROM plants_newlist WHERE idx=' + index[0], (error, rows) => {
-    if (error) throw error;
-    console.log('Plant list\n', rows);
-});
+    connection.query('SELECT * FROM plants_newlist WHERE idx=' + arra[0], (error, rows) => {
+        if (error) throw error;
+        console.log('Plant list\n', rows);
 
-connection.end();
+        return rows;
+    });
+}
+
+dbConn(array);
 
 /*
 module.exports = function() {
@@ -30,3 +34,4 @@ module.exports = function() {
     };
 }
  */
+

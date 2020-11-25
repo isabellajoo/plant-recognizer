@@ -1,22 +1,24 @@
-const mysql = require('mysql');
-const dbconfig = require('../../config/database.js');
-const connection = mysql.createConnection(dbconfig);
-const done = require('../js/done.js');
+//const mysql = require('mysql');
+//const dbconfig = require('../../config/database.js');
+//const connection = mysql.createConnection(dbconfig);
+//const done = require('../js/done.js');
 import demo from "./ml.js";
 
-var result = [];
-if(window.localStorage.getItem("imgcropped") !== null) {
-    var image = document.getElementById('img-load');
+module.exports = async function loadML() {
+    var result = [];
+    try {
+        if(window.localStorage.getItem("imgcropped") !== null) {
+            var image = document.getElementById('img-load');
+            result = await demo(image);
 
-    demo(image).then(index => {
-        for (var i = 0; i < index.length; i++) {
-            result[i] = index[i];
+            return result;
         }
-
-        return result;
-    });
+    } catch (e) {
+        console.log('ML load error: ' + e);
+    }
 }
 
+/*
 async function dbConn(arr) {
     connection.connect();
 
