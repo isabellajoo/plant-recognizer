@@ -9,10 +9,6 @@
         </style>
     </head>
     <body>
-        <div class="loading">
-            <div class="loader center"></div>
-        </div>
-
         <!-- logo -->
         <%- include('logo') %>
 
@@ -49,9 +45,10 @@
                             <div id="details">
                                 <h1 class="result-name">장미</h1>
                                 <!-- progress bar -->
-                                <div class="result-progress center">
-                                    <p class="progress-txt"><progress value="<%= progress %>" max="100"></progress>99%</p>
+                                <div class="progress">
+                                    <div class="progress-value"></div>
                                 </div>
+                                <p class="progress-txt">99%</p>
                             </div>
                         </div>
                     </div>
@@ -71,12 +68,11 @@
     </body>
     <script>
         window.addEventListener('load', function() {
-            /*
             var load = document.getElementsByClassName('loading');
             for (var i = 0;i < load.length;i += 1) {
                 load[i].style.display = 'none';
             }
-             */
+
 
             if(window.localStorage.getItem("imgcropped") !== null) {
                 document.getElementById('img-search').src = window.localStorage.getItem("imgcropped");

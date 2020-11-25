@@ -22,6 +22,7 @@ export default async function demo(image){
          */
     }
 
+    console.log(index);
     return index;
 }
 
@@ -44,7 +45,6 @@ async function predict(model, imgElement) {
     });
 
     //showResults(imgElement, classes);
-
     return await getTopKClasses(logits, TOPK_PREDICTIONS);
 }
 
@@ -64,7 +64,7 @@ async function getTopKClasses(logits, topK) {
     //const topkValues = [];
     const topkIndices = [];
     for (let i = 0; i < topK; i++) {
-        if (i === 0 || sum < 0.5) {
+        if (i === 0 || sum < 1) {
             //topkValues[i] = valuesAndIndices[i].value;
             topkIndices[i] = valuesAndIndices[i].index;
             sum += valuesAndIndices[i].value;
@@ -81,7 +81,7 @@ async function getTopKClasses(logits, topK) {
         })
     }
     */
-
+    console.log('topkIndices:' + topkIndices);
     return topkIndices;
 }
 

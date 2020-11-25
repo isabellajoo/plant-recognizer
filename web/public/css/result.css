@@ -4,6 +4,7 @@ html, body {
 }
 
 #main {
+
     position: absolute;
     width: 100%;
     height: 100%;
@@ -64,9 +65,11 @@ html, body {
  * -----------------------------
  */
 #retry {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
     padding-bottom: 30px;
-    left: 50%;
     width: 75px;
     height: 75px;
 }
@@ -102,9 +105,8 @@ html, body {
  * ====================================================================================
  */
 #result {
-    display: inline-block;
     position: relative;
-    width: 70%;
+    width: 100%;
     height: 100%;
 }
 
@@ -126,8 +128,9 @@ html, body {
 }
 #slide-container {
     display: table;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
-    left: 52.5%;
     width: 350px;
     height: 305px;
     object-fit: contain;
@@ -141,13 +144,14 @@ html, body {
     height: 25px;
     margin-top: 45%;
     margin-bottom: 45%;
-    color: black;
+    color: #7fdcc7;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
 }
 #slide-prev:hover, #slide-next:hover {
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(127, 220, 199, 0.5);
+    color: #ffffff;
 }
 #slideshow {
     display: table-cell;
@@ -174,12 +178,17 @@ html, body {
  */
 #result-container02 {
     position: relative;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
     height: 100%;
 }
 #result-info {
     position: relative;
-    left: 52.5%;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
     width: 350px;
     height: 100%;
 }
@@ -212,9 +221,7 @@ html, body {
 }
 .result-name {
     font-family: 'Jeju Gothic', sans-serif;
-}
-.progress-txt {
-    font-family: 'Jeju Gothic', sans-serif;
+    display: inline-block;
 }
 
 /*
@@ -223,9 +230,9 @@ html, body {
  * ====================================================================================
  */
 #result-others {
-    display: inline-block;
-    position: relative;
-    left: 10%;
+    position: absolute;
+    top: 0;
+    right: 0;
     width: 20%;
     height: 100%;
 }
@@ -234,16 +241,17 @@ html, body {
     left: 50%;
     vertical-align: middle;
     cursor: pointer;
-    width: 30px;
+    width: 100%;
     height: 30px;
     margin-top: 45%;
     margin-bottom: 45%;
-    color: black;
+    color: #7fdcc7;
     font-size: 18px;
     transition: 0.6s ease;
 }
 #scroll-up:hover, #scroll-down:hover {
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(127, 220, 199, 0.5);
+    color: #ffffff;
 }
 #scroll-container {
     overflow: auto;
@@ -262,27 +270,30 @@ html, body {
     height: 100%;
 }
 .modal-container {
-    display: inline-block;
+    display: table;
+    margin: 0 auto 20px auto;
+    border-radius: 40px 0 0 40px;
     position: relative;
     width: 100%;
     height: 130px;
-    margin-bottom: 20px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
 }
 .modal-container img {
-    display: block;
-    position: relative;
-    object-fit: contain;
-    width: 23%;
+    background-color: #3498db;
+    border-radius: 40px 0 0 40px;
+    width: 35%;
     height: 100%;
-    padding-right: 20px;
+    display: inline-block;
+    position: relative;
+    object-fit: cover;
+    vertical-align: middle;
 }
 .modal-content {
-    display: block;
+    display: inline-block;
     position: absolute;
     top: 0;
     right: 0;
-    width: 77%;
+    width: 65%;
     height: 100%;
 }
 .modal-content p {
@@ -290,8 +301,52 @@ html, body {
     vertical-align: middle;
 }
 
+/*
+ * ====================================================================================
+ * progress bar
+ * ====================================================================================
+ */
+.result-name.other {
+    position: absolute;
+    margin: 10px 10%;
+    font-family: 'Jeju Gothic', sans-serif;
+    display: inline;
+    font-size: 1vw;
+}
+.progress {
+    background: #7fdcc7;
+    box-shadow: 0 10px 10px -10px #7fdcc7;
+    border-radius: 40px;
+    display: flex;
+    height: 10%;
+    width: 80%;
+    margin: 20px auto;
+}
+.progress.other {
+    position: absolute;
+    margin-left: 10%;
+    margin-top: 60px;
+}
 
-
+.progress-value {
+    animation: load 3s normal forwards;
+    box-shadow: 0 10px 10px -10px #f8a986;
+    border-radius: 40px 0 0 40px;
+    background: #f69365;
+    height: 100%;
+    width: 0;
+}
+.progress-txt {
+    font-family: 'Jeju Gothic', sans-serif;
+    margin: 5px auto;
+    font-size: 30px;
+}
+.progress-txt.other {
+    position: absolute;
+    font-size: 1vw;
+    margin-left: 40%;
+    margin-top: 100px;
+}
 
 
 /*
@@ -319,4 +374,8 @@ html, body {
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
+}
+@keyframes load {
+    0% { width: 0; }
+    100% { width: 68%; }
 }
