@@ -1,4 +1,4 @@
-import demo from "./ml.js";
+//import demo from "./ml.js";
 
 const done = document.getElementById('done');
 const imgcropped = document.getElementById('img-cropped');
@@ -13,6 +13,4 @@ done.addEventListener('click', (e) => {
 
     imgcropped.src = newSrc;
     window.localStorage.setItem("imgcropped", newSrc);
-
-    demo(imgcropped);
 })

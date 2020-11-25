@@ -1,12 +1,10 @@
-const {demo} = require("./ml");
-
-//var index = [];
+import demo from "./ml.js";
 
 if(window.localStorage.getItem("imgcropped") !== null) {
-    var image = window.localStorage.getItem("imgcropped");
+    var image = document.getElementById('img-load');
     demo(image);
 }
-/*
+
 module.exports = {
     getIdxArr: function() {
         var topkIndices = [];
@@ -17,4 +15,3 @@ module.exports = {
         }
     }
 };
- */

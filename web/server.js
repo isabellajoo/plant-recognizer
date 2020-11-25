@@ -13,7 +13,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
-const server = app.listen(80, function() {
+const server = app.listen(3000, function() {
     console.log("Express server has started on port 80");
 });
 
@@ -21,7 +21,10 @@ app.get('/', function(req, res){
     res.render('home', {
     });
 });
-
+app.get('/load', function(req, res){
+    res.render('load', {
+    });
+});
 app.get('/result', function(req, res){
     res.render('result', {
         slide_len: 7,

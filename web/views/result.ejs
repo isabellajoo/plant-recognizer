@@ -71,10 +71,12 @@
     </body>
     <script>
         window.addEventListener('load', function() {
+            /*
             var load = document.getElementsByClassName('loading');
             for (var i = 0;i < load.length;i += 1) {
                 load[i].style.display = 'none';
             }
+             */
 
             if(window.localStorage.getItem("imgcropped") !== null) {
                 document.getElementById('img-search').src = window.localStorage.getItem("imgcropped");
@@ -84,7 +86,6 @@
 
     <script type="text/javascript" src="js/slideshow.js"></script>
     <script type="text/javascript" src="js/scroll.js"></script>
-    <script type="module" src="js/get.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter@2.7.0/dist/tf-converter.min.js"></script>
 </html>

@@ -14,9 +14,12 @@ export default async function demo(image){
     if (image.complete && image.naturalHeight !== 0) {
         index = await predict(model, image);
     } else {
+        index = predict(model, image);
+        /*
         image.onload = () => {
             index = predict(model, image);
         }
+         */
     }
 
     return index;

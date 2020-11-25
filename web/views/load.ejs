@@ -6,10 +6,25 @@
         <link rel="stylesheet" href="css/load.css">
     </head>
     <body>
-    <!-- logo -->
-    <%- include('logo') %>
+        <!-- logo -->
+        <div class="center">
+            <%- include('logo') %>
+        </div>
 
-    <!-- loading -->
-    <div class="loader center"></div>
+        <!-- loading -->
+        <div id="loading" >
+            <img id="img-load" src="" alt=""/>
+            <div id="loader"></div>
+        </div>
     </body>
+    <script>
+        window.addEventListener('load', function() {
+            if(window.localStorage.getItem("imgcropped") !== null) {
+                document.getElementById('img-load').src = window.localStorage.getItem("imgcropped");
+            }
+        });
+    </script>
+
+    <script type="module" src="js/get.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
 </html>
