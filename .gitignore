@@ -6,10 +6,11 @@ MachineLearning/model
 
 MachineLearning/Categories.txt
 MachineLearning/label.txt
-MachineLearning/image_data.npy
-MachineLearning/image_data.hdf5
 MachineLearning/train.hdf5
 MachineLearning/test.hdf5
 MachineLearning/train1.hdf5
 MachineLearning/test1.hdf5
+MachineLearning/data.hdf5
+MachineLearning/image.zip
+MachineLearning/temp.py
 ML
