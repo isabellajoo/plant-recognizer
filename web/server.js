@@ -18,7 +18,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
-const server = app.listen(80, function() {
+const server = app.listen(3000, function() {
     console.log("Express server has started on port 80");
 });
 
@@ -46,21 +46,23 @@ app.get('/load', function(req, res){
 });
 
 var result = app.get('/result', function(req, res){
+    res.render('result', {
+        slide_len: 7,
+        result_len: 10,
+        progress: 50
+        //data: rows
+    });
+    /*
     connection.query('SELECT * FROM plants_newlist WHERE idx=69', (error, rows) => {
         if (error) {
             console.log(error);
             throw error;
         } else {
             console.log(rows);
-            res.render('result', {
-                slide_len: 7,
-                result_len: 10,
-                progress: 50,
-                data: rows
-            });
+
         }
     });
-
+    */
 });
 
 //var router = require('./router/main')(app, fs);

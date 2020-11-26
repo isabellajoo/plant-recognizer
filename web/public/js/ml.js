@@ -23,6 +23,7 @@ export default async function demo(image){
     }
 
     localStorage.setItem("key", JSON.stringify(index));
+    console.log('localStorage: ' + localStorage.getItem("key"));
 
     console.log(index);
     return index;

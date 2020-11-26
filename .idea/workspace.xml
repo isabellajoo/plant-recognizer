@@ -24,13 +24,10 @@
   <component name="ChangeListManager">
     <list default="true" id="30fc2966-7ef6-436d-a304-28db03633308" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/css/result.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/css/result.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/js/load.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/js/load.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/public/js/ml.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/js/ml.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/js/plantlist.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/js/plantlist.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/home.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/views/result.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/result.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views/resultOther.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/resultOther.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +111,12 @@
       <workItem from="1606181236594" duration="5025000" />
       <workItem from="1606216923291" duration="11850000" />
       <workItem from="1606271344288" duration="13000" />
-      <workItem from="1606271511269" duration="2862000" />
+      <workItem from="1606271511269" duration="3131000" />
+      <workItem from="1606302075892" duration="1000" />
+      <workItem from="1606303071455" duration="22000" />
+      <workItem from="1606303773976" duration="618000" />
+      <workItem from="1606304756114" duration="11673000" />
+      <workItem from="1606360584507" duration="1580000" />
     </task>
     <servers />
   </component>
@@ -162,10 +164,10 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="1235" y="260" key="RollbackChangesDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1600957429904" />
-    <state x="465" y="164" key="SettingsEditor" timestamp="1606230590007">
+    <state x="465" y="164" key="SettingsEditor" timestamp="1606314523990">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="465" y="164" key="SettingsEditor/0.30.1920.1050@0.30.1920.1050" timestamp="1606230590007" />
+    <state x="465" y="164" key="SettingsEditor/0.30.1920.1050@0.30.1920.1050" timestamp="1606314523990" />
     <state x="843" y="36" width="898" height="832" key="dock-window-1" timestamp="1606045654969">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
