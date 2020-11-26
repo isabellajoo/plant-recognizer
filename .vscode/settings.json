@@ -1,4 +1,4 @@
 {
     "python.pythonPath": "c:\\ML\\plant-recognizer\\ML\\Scripts\\python.exe",
-    "python.dataScience.jupyterServerURI": "local"
+    "jupyter.jupyterServerType": "local"
 }

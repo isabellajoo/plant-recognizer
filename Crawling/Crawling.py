@@ -10,9 +10,13 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("-S", "--search", help='search the parameter from web')
 parser.add_argument("-N", "--number", default=20, help='crawling count, default is 20')
+parser.add_argument("-P", "--prefix", help='keyword prefix')
+parser.add_argument("-s", "--suffix", help='keyword suffix')
 args = parser.parse_args()
 
 search = args.search
+prefix = args.prefix if args.prefix else ''
+suffix = args.suffix if args.suffix else ''
 number = int(args.number)
 
 base_folder = 'image/'
@@ -22,7 +26,7 @@ browser = webdriver.Chrome(webDriver)
 
 def Crawl(word):
     params ={
-        "q":word
+        "q": str(prefix) + ' ' + word + ' ' + str(suffix)
         ,"tbm":"isch"
         ,"sa":"1"
         ,"source":"lnms&tbm=isch"
@@ -92,7 +96,7 @@ else:
     print('---    Crawling Start    ---')
     for search in search_list:
         print('Search :', search)
-        Crawl(search.rstrip() + ' 식물')
+        Crawl(search.rstrip())
     print('---  Crawling Complete   ---')
 
 browser.close()
