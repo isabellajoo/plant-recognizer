@@ -12,9 +12,11 @@
         </div>
 
         <!-- loading -->
-        <div id="loading" >
-            <img id="img-load" src="" alt=""/>
-            <div id="loader"></div>
+        <div id="loading">
+            <form id="post" action="/result" method="post">
+                <img id="img-load" src="" alt=""/>
+                <div id="loader"></div>
+            </form>
         </div>
     </body>
     <script>
@@ -24,6 +26,7 @@
             }
         });
     </script>
+    <script type="text/javascript" src="scripts/jquery/dist/jquery.js"></script>
     <script type="module" src="js/load.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
 </html>

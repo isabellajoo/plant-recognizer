@@ -13,10 +13,46 @@ async function loadML() {
 
             if(localStorage.getItem("key") !== null) {
                 var key = JSON.parse(localStorage.getItem("key"));
-                console.log('localStorage: ' + key);
-                var href = "http://localhost:3000/result?id=" + key[0].classIndex;
-                console.log('location: ' + href);
-                await redirect(href)
+                console.log('len: ' + key.length);
+                var array = new Array();
+                for (var i = 0; i < key.length; i++) {
+                    var data = new Object();
+
+                    data.classIndex = key[i].classIndex;
+                    data.probability = key[i].probability;
+
+                    array.push(data);
+                }
+                console.log(array);
+                console.log(JSON.stringify(array));
+
+                var params = { key: array };
+                console.log(params);
+
+                /*
+                $("post").click(function () {
+                    $.ajax({
+                        url: "/result",
+                        type: "POST",
+                        traditional: true,
+                        dataType: "JSON",
+                        data: { key: key },
+                        success: function (data) {
+                            console.log("data trasmit success: " + data);
+                        },
+                        error: function (xhr, status, error){
+                            alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+                        }
+                    })
+                })
+                */
+
+
+                //console.log('localStorage: ' + key);
+                var href = "http://www.plants-recognizer.gq/result?" + $.param(params);
+                //console.log('location: ' + href);
+                //await redirect(href)
+
             }
 
             //return result;
@@ -27,7 +63,7 @@ async function loadML() {
     }
 }
 
-async function redirect (url) {
+async function redirect(url) {
     var ua        = navigator.userAgent.toLowerCase(),
         isIE      = ua.indexOf('msie') !== -1,
         version   = parseInt(ua.substr(4, 2), 10);
@@ -46,7 +82,7 @@ async function redirect (url) {
     }
 }
 
-loadML();
+//loadML();
 
 /*
 async function dbConn(arr) {

@@ -16,7 +16,7 @@
 
             <!-- img upload -->
             <div id="main">
-                <form class="my-form" id="img-upload">
+                <form action="/load" class="my-form" id="img-upload">
                     <label class="button center" id="drop-area">
                         <input type="file" name="file" id="file-upload" accept="image/*" onchange="handleFiles(this.files)">
                         <img id="add-img" src="img/add_image.png" alt=""/>
@@ -37,16 +37,17 @@
                         <div class="img-container">
                             <img id="img-preview" src="" alt="">
                         </div>
-                        <img id="img-cropped" src="" alt="">
                     </div>
                     <div class="modal-footer">
-                        <a href="/load"><button id="done" type="button" class="btn">완료</button></a>
+                        <img id="img-cropped" src="" alt="">
+                        <button id="done" type="button" class="btn">완료</button>
                         <a href="/"><button id="cancel" type="button" class="btn" data-dismiss="modal">취소</button></a>
                     </div>
                 </div>
             </div>
         </div>
     </body>
+    <script type="text/javascript" src="scripts/jquery/dist/jquery.js"></script>
     <script type="text/javascript" src="js/dragdrop.js"></script>
     <script src="../scripts/cropperjs/dist/cropper.js"></script>
     <script type="module" src="js/done.js"></script>

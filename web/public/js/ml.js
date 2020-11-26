@@ -4,7 +4,7 @@ const IMAGE_SIZE = 300;
 const TOPK_PREDICTIONS = 11;
 
 /* model execute */
-export default async function demo(image){
+module.exports = async function demo(image){
     /* model loading */
     const model = await tf.loadLayersModel('https://storage.googleapis.com/plant-recognizer/model_70/model_2.json');
     console.log('Successfully loaded model')
@@ -23,9 +23,9 @@ export default async function demo(image){
     }
 
     localStorage.setItem("key", JSON.stringify(index));
-    console.log('localStorage: ' + JSON.parse(localStorage.getItem("key")));
+    //console.log('localStorage: ' + JSON.parse(localStorage.getItem("key")));
 
-    console.log(index);
+    //console.log(index);
     return index;
 }
 
