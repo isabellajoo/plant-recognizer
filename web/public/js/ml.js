@@ -24,14 +24,6 @@ export default async function demo(image){
 
     localStorage.setItem("key", JSON.stringify(index));
 
-    /*
-    var jsonEncode = JSON.stringify(index);
-    alert(jsonEncode);
-
-    var jsonDecode = JSON.parse(jsonEncode);
-    alert(jsonDecode[0].className + ' ' + jsonDecode[0].probability);
-    */
-
     console.log(index);
     return index;
 }
