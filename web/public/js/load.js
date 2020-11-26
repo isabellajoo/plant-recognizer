@@ -12,8 +12,9 @@ async function loadML() {
             await demo(image);
 
             if(localStorage.getItem("key") !== null) {
-                console.log('localStorage: ' + localStorage.getItem("key"));
-                var href = "http://localhost:3000/result";
+                var key = JSON.parse(localStorage.getItem("key"));
+                console.log('localStorage: ' + key);
+                var href = "http://localhost:3000/result?id=" + key[0].classIndex;
                 console.log('location: ' + href);
                 await redirect(href)
             }

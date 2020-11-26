@@ -25,44 +25,28 @@ const server = app.listen(3000, function() {
 app.get('/', function(req, res){
     res.render('home', {
     });
-    //localStorage.setItem("key", null);
 });
 
 app.get('/load', function(req, res){
     res.render('load', {
     });
-    /*
-    app.use((req, res) => {
-        if(localStorage.getItem("key") !== null) {
-            var data = JSON.parse(localStorage.getItem("key"));
-
-        } else {
-            console.log('null');
-        }
-    })
-
-     */
-
 });
 
-var result = app.get('/result', function(req, res){
-    res.render('result', {
-        slide_len: 7,
-        result_len: 10,
-        progress: 50
-        //data: rows
-    });
-    /*
-    connection.query('SELECT * FROM plants_newlist WHERE idx=69', (error, rows) => {
+app.get('/result', function(req, res){
+        connection.query('SELECT * FROM plants_newlist WHERE idx=' + req.query.id, (error, rows) => {
         if (error) {
             console.log(error);
             throw error;
         } else {
             console.log(rows);
-
+            res.render('result', {
+                slide_len: 7,
+                result_len: 10,
+                progress: 50,
+                data: rows
+            });
         }
     });
-    */
 });
 
 //var router = require('./router/main')(app, fs);
