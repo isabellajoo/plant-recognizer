@@ -53,13 +53,11 @@ app.get('/result', function(req, res){
             throw error;
         } else {
             var prog
-            if(req.query.prob === 100) {
+            if(req.query.prob == 100) {
                 prog = req.query.prob - 1;
-                console.log(prog);
             } else {
                 prog = req.query.prob;
             }
-            console.log(rows);
             res.render('result', {
                 progress: prog,
                 data: rows,
