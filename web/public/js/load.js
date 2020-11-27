@@ -53,7 +53,7 @@ async function loadML() {
     }
 }
 
-async function redirect (url) {
+async function redirect(url) {
     var ua        = navigator.userAgent.toLowerCase(),
         isIE      = ua.indexOf('msie') !== -1,
         version   = parseInt(ua.substr(4, 2), 10);
@@ -72,7 +72,7 @@ async function redirect (url) {
     }
 }
 
-loadML();
+//loadML();
 
 /*
 async function dbConn(arr) {
