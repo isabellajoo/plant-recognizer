@@ -1,15 +1,17 @@
 html, body {
     margin-right: 0;
     height: 100%;
+    -ms-overflow-style: none;
 }
-
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+    display: none !important;
+}
 #main {
 
     position: absolute;
     width: 100%;
     height: 100%;
 }
-
 .center {
     display: block;
     margin-left: auto;
@@ -256,7 +258,7 @@ html, body {
 #scroll-container {
     overflow: auto;
     position: relative;
-    width: 90%;
+    width: 100%;
     height: 450px;
     -ms-overflow-style: none;
     scroll-behavior: smooth;
@@ -318,7 +320,7 @@ html, body {
 .result-name.other {
     vertical-align: middle;
     position: relative;
-    margin: 30% 10%;
+    margin: 55px 10%;
     font-family: 'Jeju Gothic', sans-serif;
     display: inline-block;
     font-size: 1vw;
