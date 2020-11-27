@@ -2,26 +2,21 @@ html, body {
     overflow: auto;
     -ms-overflow-style: none;
 }
-
 html::-webkit-scrollbar, body::-webkit-scrollbar {
     display: none !important;
 }
-
 #main {
     padding-bottom: 20px;
 }
-
 #logo-img {
     margin-top: 100px;
     margin-bottom: 10px;
 }
-
 #add-img {
     margin-top: 100px;
     width: 100px;
     height: 100px;
 }
-
 #add-txt {
     font-family: 'Jeju Gothic', sans-serif;
     color: #ffffff;
@@ -40,11 +35,9 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     align-items: center;
     transition: 0.5s;
 }
-
 .container .my-form {
     position: relative;
 }
-
 .container#blur.active {
     filter: blur(10px);
     pointer-events: none;
@@ -141,7 +134,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     transform: translate(-50%, -50%);
     width: 60vw;
     height: auto;
-    overflow: hidden;
+    overflow: auto;
     box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
     background-color: #fefefe;
     border-radius: 20px;
@@ -212,7 +205,6 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     vertical-align: middle;
     border-style: none;
 }
-
 #img-cropped {
     display: none;
 }

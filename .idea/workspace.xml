@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,24 +23,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="30fc2966-7ef6-436d-a304-28db03633308" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/config/database.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/css/result.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/css/result.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/js/database.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/js/dragdrop.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/js/dragdrop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/js/load.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/js/load.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/public/js/ml.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/js/ml.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/public/js/plantlist.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/js/plantlist.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/home.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views/logo.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/logo.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/views/result.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/web/views/result.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../plant-recognizer\exportToHTML" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -73,7 +71,7 @@
     <property name="node.js.selected.package.stylelint" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.webpack" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -111,7 +109,14 @@
       <workItem from="1606041479474" duration="18229000" />
       <workItem from="1606116360010" duration="15869000" />
       <workItem from="1606181236594" duration="5025000" />
-      <workItem from="1606216923291" duration="8895000" />
+      <workItem from="1606216923291" duration="11850000" />
+      <workItem from="1606271344288" duration="13000" />
+      <workItem from="1606271511269" duration="3131000" />
+      <workItem from="1606302075892" duration="1000" />
+      <workItem from="1606303071455" duration="22000" />
+      <workItem from="1606303773976" duration="618000" />
+      <workItem from="1606304756114" duration="11673000" />
+      <workItem from="1606360584507" duration="1580000" />
     </task>
     <servers />
   </component>
@@ -139,6 +144,10 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="414" y="210" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1602000969639" />
+    <state x="707" y="390" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1606230668505">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="707" y="390" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1606230668505" />
     <state x="1201" y="260" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1600788048922">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
@@ -147,18 +156,18 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="1087" y="331" key="EditFileWatcherDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1600788145266" />
-    <state x="1201" y="310" key="FileChooserDialogImpl" timestamp="1602072396609">
+    <state x="1201" y="310" key="FileChooserDialogImpl" timestamp="1606230659882">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="1201" y="310" key="FileChooserDialogImpl/0.30.1920.1050@0.30.1920.1050" timestamp="1602072396609" />
+    <state x="1201" y="310" key="FileChooserDialogImpl/0.30.1920.1050@0.30.1920.1050" timestamp="1606230659882" />
     <state x="1235" y="260" key="RollbackChangesDialog" timestamp="1600957429904">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="1235" y="260" key="RollbackChangesDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1600957429904" />
-    <state x="922" y="199" key="SettingsEditor" timestamp="1601483465239">
+    <state x="465" y="164" key="SettingsEditor" timestamp="1606314523990">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
-    <state x="922" y="199" key="SettingsEditor/0.30.1920.1050@0.30.1920.1050" timestamp="1601483465239" />
+    <state x="465" y="164" key="SettingsEditor/0.30.1920.1050@0.30.1920.1050" timestamp="1606314523990" />
     <state x="843" y="36" width="898" height="832" key="dock-window-1" timestamp="1606045654969">
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
@@ -167,5 +176,9 @@
       <screen x="0" y="30" width="1920" height="1050" />
     </state>
     <state x="53" y="129" width="1748" height="860" key="dock-window-2/0.30.1920.1050@0.30.1920.1050" timestamp="1601475718208" />
+    <state x="623" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1606230606443">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="623" y="257" width="672" height="678" key="search.everywhere.popup/0.30.1920.1050@0.30.1920.1050" timestamp="1606230606443" />
   </component>
 </project>

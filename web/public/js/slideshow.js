@@ -3,6 +3,8 @@ const slideNext = document.getElementById("slide-next");
 const dot_1 = document.getElementById("dot1");
 const dot_2 = document.getElementById("dot2");
 const dot_3 = document.getElementById("dot3");
+const dot_4 = document.getElementById("dot4");
+const dot_5 = document.getElementById("dot5");
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -22,6 +24,12 @@ dot_2.onclick = function () {
 }
 dot_3.onclick = function () {
     currentSlide(3);
+}
+dot_4.onclick = function () {
+    currentSlide(4);
+}
+dot_5.onclick = function () {
+    currentSlide(5);
 }
 
 function plusSlides(n) {

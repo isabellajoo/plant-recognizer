@@ -58,8 +58,6 @@ function previewFile(file) {
     }
 }
 
-
-
 function popUp() {
     blur.classList.toggle('active');
     modal.classList.toggle('active');
@@ -90,6 +88,7 @@ cancel.onclick = function() {
     cropper = null;
 }
 
+/*
 window.onclick = function(e) {
     var isClickInside = modal.contains(e.target);
 
@@ -101,5 +100,4 @@ window.onclick = function(e) {
     cropper.destroy();
     cropper = null;
 }
-
-
+ */

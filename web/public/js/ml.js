@@ -1,41 +1,36 @@
-import {PLANT_LIST} from './plantlist.js';
-
-const predictionsElement = document.getElementById('predictions');
-const done = document.getElementById('done');
-const imgcropped = document.getElementById('img-cropped');
+//import {PLANT_LIST} from './plantlist.js';
 
 const IMAGE_SIZE = 300;
 const TOPK_PREDICTIONS = 11;
 
 /* model execute */
-const demo = async (image) => {
-    //status('Loading model...');
-
+export default async function demo(image){
     /* model loading */
     const model = await tf.loadLayersModel('https://storage.googleapis.com/plant-recognizer/model_70/model_2.json');
     console.log('Successfully loaded model')
+
+    var index = [];
     /* model prediction with set image size */
-    //model.predict(tf.zeros([null, IMAGE_SIZE, IMAGE_SIZE, 3])).dispose();
-    //status('');
-
-    //const image = document.getElementById('img-preview');
     if (image.complete && image.naturalHeight !== 0) {
-        await predict(model, image);
+        index = await predict(model, image);
     } else {
+        index = predict(model, image);
+        /*
         image.onload = () => {
-            predict(model, image);
+            index = predict(model, image);
         }
+         */
     }
-};
 
+    localStorage.setItem("key", JSON.stringify(index));
+    //console.log('localStorage: ' + JSON.parse(localStorage.getItem("key")));
+
+    //console.log(index);
+    return index;
+}
 
 /* model predict and time calculating */
 async function predict(model, imgElement) {
-    //status('Predicting...');
-
-    //const startTime1 = performance.now();
-    //let startTime2;
-
     const logits = tf.tidy(() => {
         const img = tf.browser.fromPixels(imgElement).toFloat();
 
@@ -48,22 +43,16 @@ async function predict(model, imgElement) {
             false
           ).expandDims(0);
         console.log(batched.shape);
-        //startTime2 = performance.now();
         
         return model.predict(batched);
     });
 
-    const classes = await getTopKClasses(logits, TOPK_PREDICTIONS);
-    //const totalTime1 = performance.now() - startTime1;
-    //const totalTime2 = performance.now() - startTime2;
-    //status(`Done in ${Math.floor(totalTime1)} ms` +
-            //`(not including preprocessing: ${Math.floor(totalTime2)} ms)`);
-
-    showResults(imgElement, classes);
+    //showResults(imgElement, classes);
+    return await getTopKClasses(logits, TOPK_PREDICTIONS);
 }
 
 /* Find Top n classes */
-export async function getTopKClasses(logits, topK) {
+async function getTopKClasses(logits, topK) {
     const values = await logits.data();
 
     const valuesAndIndices = [];
@@ -73,25 +62,34 @@ export async function getTopKClasses(logits, topK) {
     valuesAndIndices.sort((a, b) => {
         return b.value - a.value;
     });
-    const topkValues = new Float32Array(topK);
-    const topkIndices = new Int32Array(topK);
+
+    var sum = 0;
+    const topClassesAndProbs = [];
     for (let i = 0; i < topK; i++) {
-        topkValues[i] = valuesAndIndices[i].value;
-        topkIndices[i] = valuesAndIndices[i].index;
+        if (i === 0 || sum < 1) {
+            topClassesAndProbs.push({
+                classIndex: valuesAndIndices[i].index,
+                probability: valuesAndIndices[i].value
+            });
+            sum += valuesAndIndices[i].value;
+
+            console.log(sum);
+        }
     }
 
-    const topClassesAndProbs = [];
+    /*
     for (let i = 0; i < topkIndices.length; i++) {
         topClassesAndProbs.push({
-            className: PLANT_LIST[topkIndices[i]],
+            className: topkIndices[i],
             probability: topkValues[i]
         })
-    }
+    */
+
     return topClassesAndProbs;
 }
 
-
-/* insert result to each div */
+/*
+/* insert result to each div
 function showResults(imgElement, classes) {
     const predictionContainer = document.createElement('div');
     predictionContainer.className = 'pred-container';
@@ -105,14 +103,17 @@ function showResults(imgElement, classes) {
         const row = document.createElement('div');
         row.className = 'row';
 
+        /*
         const classElement = document.createElement('div');
         classElement.className = 'cell';
         classElement.innerText = classes[i].className;
         row.appendChild(classElement);
 
+
         const probsElement = document.createElement('div');
         probsElement.className = 'cell';
-        probsElement.innerText = classes[i].probability.toFixed(3);
+        probsElement.innerText = classes[i];
+        //probsElement.innerText = classes[i].probability.toFixed(3);
         row.appendChild(probsElement);
 
         probsContainer.appendChild(row);
@@ -126,62 +127,3 @@ const demoStatusElement = document.getElementById('status');
 /* status message print
 const status = msg => demoStatusElement.innerText = msg;
 */
-
-/*
-function cropImage() {
-    var img = document.createElement("img");
-    img.src =
-    console.log(img.src);
-
-    var canvas = document.createElement("canvas");
-    canvas.getContext("2d").drawImage(img, 0, 0);
-
-    var MAX_WIDTH = IMAGE_SIZE;
-    var MAX_HEIGHT = IMAGE_SIZE;
-    var width = imgpreview.width;
-    var height = imgpreview.height;
-    console.log('width:'+width+' height:'+height);
-
-    if (width > height) {
-        if (width > MAX_WIDTH) {
-            height *= MAX_WIDTH / width;
-            width = MAX_WIDTH;
-        }
-    } else {
-        if (height > MAX_HEIGHT) {
-            width *= MAX_HEIGHT / height;
-            height = MAX_HEIGHT;
-        }
-    }
-    canvas.width = width;
-    canvas.height = height;
-    canvas.getContext("2d").drawImage(img, 0, 0, width, height);
-    console.log(canvas);
-
-
-    var dataURL = img.src;
-    var byteString = atob(dataURL.split(',')[1]);
-    var mimeString = dataURL.split(',')[0].split(':')[1].split(';')[0];
-    var ab = new ArrayBuffer(byteString.length);
-    var ia = new Uint8Array(ab);
-    for (var i = 0; i < byteString.length; i++) {
-        ia[i] = byteString.charCodeAt(i);
-    }
-
-    imgcropped.src = new Blob([ab], {type: mimeString});
-}
-*/
-
-done.addEventListener('click', (e) => {
-    console.log('done...');
-
-    var newSrc = cropper.getCroppedCanvas({
-        maxWidth: 300,
-        maxHeight: 300
-    }).toDataURL();
-
-    imgcropped.src = newSrc;
-    window.localStorage.setItem("imgcropped", newSrc);
-
-    demo(imgcropped);
-})
