@@ -2,6 +2,7 @@
 //const dbconfig = require('../../config/database.js');
 //const connection = mysql.createConnection(dbconfig);
 //const done = require('../js/done.js');
+import {PLANT_LIST} from './plantlist.js';
 import demo from "./ml.js";
 
 async function loadML() {
@@ -13,9 +14,34 @@ async function loadML() {
 
             if(localStorage.getItem("key") !== null) {
                 var key = JSON.parse(localStorage.getItem("key"));
-                console.log('localStorage: ' + key);
-                var href = "http://localhost:3000/result?id=" + key[0].classIndex;
-                console.log('location: ' + href);
+                //console.log('localStorage: ' + key);
+                var classIndex = new Array();
+                for (var i = 0; i < key.length; i++) {
+                    var obj = new Object();
+                    obj =  key[i].classIndex;
+
+                    classIndex.push(obj);
+                }
+                console.log(JSON.stringify(classIndex));
+
+                var probability = key[0].probability * 100;
+                probability = probability.toFixed(0);
+                //localStorage.setItem("probability", probability);
+
+                var name = new Array();
+                for (var i = 0; i < key.length; i++) {
+                    var obj = new Object();
+                    obj =  PLANT_LIST[key[i].classIndex];
+
+                    name.push(obj);
+                }
+
+                localStorage.setItem("resultName", JSON.stringify(name));
+                console.log(JSON.stringify(name));
+
+
+                var href = "http://www.plants-recognizer.gq/result?id=" + classIndex[0] + "&prob=" + probability;
+                //console.log('location: ' + href);
                 await redirect(href)
             }
 

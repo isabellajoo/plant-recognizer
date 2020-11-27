@@ -58,8 +58,6 @@ function previewFile(file) {
     }
 }
 
-
-
 function popUp() {
     blur.classList.toggle('active');
     modal.classList.toggle('active');

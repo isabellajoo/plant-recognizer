@@ -261,6 +261,9 @@ html, body {
     -ms-overflow-style: none;
     scroll-behavior: smooth;
 }
+#scroll-container a {
+    color: #000000;
+}
 #scroll-container::-webkit-scrollbar {
     display: none !important;
 }
@@ -307,10 +310,11 @@ html, body {
  * ====================================================================================
  */
 .result-name.other {
-    position: absolute;
-    margin: 10px 10%;
+    vertical-align: middle;
+    position: relative;
+    margin: 30% 10%;
     font-family: 'Jeju Gothic', sans-serif;
-    display: inline;
+    display: inline-block;
     font-size: 1vw;
 }
 .progress {
@@ -329,9 +333,8 @@ html, body {
 }
 
 .progress-value {
-    animation: load 3s normal forwards;
     box-shadow: 0 10px 10px -10px #f8a986;
-    border-radius: 40px 0 0 40px;
+    border-radius: 40px;
     background: #f69365;
     height: 100%;
     width: 0;
@@ -354,11 +357,6 @@ html, body {
  * effect
  * ====================================================================================
  */
-@keyframes spin {
-    0% {transform: rotate(0deg); }
-    100% {transform: rotate(360deg); }
-}
-
 .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;

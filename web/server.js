@@ -5,8 +5,6 @@ const fs = require('fs');
 const mysql = require('mysql');
 const dbconfig = require('./config/database.js');
 const connection = mysql.createConnection(dbconfig);
-var LocalStorage = require('node-localstorage').LocalStorage
-var localStorage = new LocalStorage('./scratch');
 
 app.use(express.static('public'));
 app.use('/scripts', express.static('node_modules'));
@@ -18,7 +16,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
-const server = app.listen(3000, function() {
+const server = app.listen(80, function() {
     console.log("Express server has started on port 80");
 });
 
@@ -33,17 +31,23 @@ app.get('/load', function(req, res){
 });
 
 app.get('/result', function(req, res){
-        connection.query('SELECT * FROM plants_newlist WHERE idx=' + req.query.id, (error, rows) => {
+    connection.query('SELECT * FROM plants_newlist WHERE idx=' + req.query.id, (error, rows) => {
         if (error) {
             console.log(error);
             throw error;
         } else {
+            var prog
+            if(req.query.prob === 100) {
+                prog = req.query.prob - 1;
+                console.log(prog);
+            } else {
+                prog = req.query.prob;
+            }
             console.log(rows);
             res.render('result', {
-                slide_len: 7,
                 result_len: 10,
-                progress: 50,
-                data: rows
+                progress: prog,
+                data: rows,
             });
         }
     });
