@@ -24,6 +24,7 @@ window.addEventListener('load', function() {
         }
         console.log(arrayName);
         console.log(arrayIndex);
+        console.log(arrayProb);
 
         var imgResult = document.getElementsByClassName('img-result');
         for (var i = 0; i < 5; i++) {
@@ -35,10 +36,18 @@ window.addEventListener('load', function() {
             imgResult[i].src = "image/" + arrayName[i - 5] + " 식물/google_0000.jpg";
         }
 
+        console.log(arrayProb.length)
         if (localStorage.getItem("classIndex") !== null && localStorage.getItem("probability") !== null) {
             var resultHREF = document.getElementsByClassName('result-other-href');
-            for (var i = 0; i < arrayIndex.length; i++) {
-                resultHREF[i].setAttribute('href', '/result?id=' + arrayIndex[i] + '&prob=' + arrayProb[i]);
+            for (var i = 0; i < arrayProb.length; i++) {
+                resultHREF[i].setAttribute('href', '/result?id=' + arrayIndex[i] + '&prob=' + arrayProb[i] + '&result=' + takeProb.length);
+            }
+        }
+
+        if(takeProb.length > 3) {
+            var scrollBtn = document.getElementsByClassName('scroll-btn');
+            for (var i = 0; i < scrollBtn.length; i++) {
+                scrollBtn[i].style.display = 'inline';
             }
         }
     }

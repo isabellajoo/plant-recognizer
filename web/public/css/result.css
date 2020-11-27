@@ -255,6 +255,9 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     background-color: rgba(127, 220, 199, 0.5);
     color: #ffffff;
 }
+.scroll-btn {
+    display: none;
+}
 #scroll-container {
     overflow: auto;
     position: relative;

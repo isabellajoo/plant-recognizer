@@ -14,9 +14,22 @@ async function loadML() {
 
             if(localStorage.getItem("key") !== null) {
                 var key = JSON.parse(localStorage.getItem("key"));
-                //console.log('localStorage: ' + key);
-                var classIndex = [];
+                var probability = [];
+                var sum = 0;
                 for (var i = 0; i < key.length; i++) {
+                    if (sum < 0.8 && key[i].probability >= 0.005) {
+                        var obj = {};
+                        obj =  key[i].probability * 100;
+                        obj = obj.toFixed(0);
+                        sum += key[i].probability;
+                        probability.push(obj);
+                    }
+                }
+                localStorage.setItem("probability", JSON.stringify(probability));
+                console.log(JSON.stringify(probability));
+
+                var classIndex = [];
+                for (var i = 0; i < probability.length; i++) {
                     var obj = {};
                     obj =  key[i].classIndex;
 
@@ -25,21 +38,8 @@ async function loadML() {
                 localStorage.setItem("classIndex", JSON.stringify(classIndex));
                 console.log(JSON.stringify(classIndex));
 
-                var probability = [];
-                for (var i = 0; i < key.length; i++) {
-                    var obj = {};
-                    obj =  key[i].probability * 100;
-                    obj = obj.toFixed(0);
-
-                    probability.push(obj);
-                }
-
-                localStorage.setItem("probability", JSON.stringify(probability));
-                console.log(JSON.stringify(probability));
-                //localStorage.setItem("probability", probability);
-
                 var name = [];
-                for (var i = 0; i < key.length; i++) {
+                for (var i = 0; i < probability.length; i++) {
                     var obj = {};
                     obj =  PLANT_LIST[key[i].classIndex];
 
@@ -50,7 +50,7 @@ async function loadML() {
                 console.log(JSON.stringify(name));
 
 
-                var href = "http://www.plants-recognizer.gq/result?id=" + classIndex[0] + "&prob=" + probability[0];
+                var href = "http://www.plants-recognizer.gq/result?id=" + classIndex[0] + "&prob=" + probability[0] + "&result=" + probability.length;
                 //console.log('location: ' + href);
                 await redirect(href)
             }

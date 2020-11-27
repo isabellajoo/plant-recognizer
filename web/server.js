@@ -42,7 +42,6 @@ app.get('/', function(req, res){
     });
 });
 app.get('/load', upload.single('img'), (req, res) => {
-    console.log(req.file);
     res.render('load', {
     });
 });
@@ -61,6 +60,7 @@ app.get('/result', function(req, res){
             res.render('result', {
                 progress: prog,
                 data: rows,
+                num: req.query.result - 1
             });
         }
     });
