@@ -39,8 +39,12 @@ window.addEventListener('load', function() {
         console.log(arrayProb.length)
         if (localStorage.getItem("classIndex") !== null && localStorage.getItem("probability") !== null) {
             var resultHREF = document.getElementsByClassName('result-other-href');
+            var progResult = document.getElementsByClassName('progress-txt');
+            var progValue = document.getElementsByClassName('progress-value');
             for (var i = 0; i < arrayProb.length; i++) {
                 resultHREF[i].setAttribute('href', '/result?id=' + arrayIndex[i] + '&prob=' + arrayProb[i] + '&result=' + takeProb.length);
+                progValue[i + 1].style.width = arrayProb[i] + '%';
+                progResult[i + 1].innerHTML = arrayProb[i] + '%';
             }
         }
 

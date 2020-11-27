@@ -323,7 +323,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 .result-name.other {
     vertical-align: middle;
     position: relative;
-    margin: 55px 10%;
+    margin: 15px 10%;
     font-family: 'Jeju Gothic', sans-serif;
     display: inline-block;
     font-size: 1vw;
@@ -340,7 +340,8 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 .progress.other {
     position: absolute;
     margin-left: 10%;
-    margin-top: 60px;
+    margin-top: 20px;
+    margin-bottom: 0;
 }
 
 .progress-value {
@@ -356,10 +357,10 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
     font-size: 30px;
 }
 .progress-txt.other {
-    position: absolute;
+    position: relative;
     font-size: 1vw;
-    margin-left: 40%;
-    margin-top: 100px;
+    margin-left: 45%;
+    margin-top: 45px;
 }
 
 
