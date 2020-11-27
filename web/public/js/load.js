@@ -15,22 +15,32 @@ async function loadML() {
             if(localStorage.getItem("key") !== null) {
                 var key = JSON.parse(localStorage.getItem("key"));
                 //console.log('localStorage: ' + key);
-                var classIndex = new Array();
+                var classIndex = [];
                 for (var i = 0; i < key.length; i++) {
-                    var obj = new Object();
+                    var obj = {};
                     obj =  key[i].classIndex;
 
                     classIndex.push(obj);
                 }
+                localStorage.setItem("classIndex", JSON.stringify(classIndex));
                 console.log(JSON.stringify(classIndex));
 
-                var probability = key[0].probability * 100;
-                probability = probability.toFixed(0);
+                var probability = [];
+                for (var i = 0; i < key.length; i++) {
+                    var obj = {};
+                    obj =  key[i].probability * 100;
+                    obj = obj.toFixed(0);
+
+                    probability.push(obj);
+                }
+
+                localStorage.setItem("probability", JSON.stringify(probability));
+                console.log(JSON.stringify(probability));
                 //localStorage.setItem("probability", probability);
 
-                var name = new Array();
+                var name = [];
                 for (var i = 0; i < key.length; i++) {
-                    var obj = new Object();
+                    var obj = {};
                     obj =  PLANT_LIST[key[i].classIndex];
 
                     name.push(obj);
@@ -40,7 +50,7 @@ async function loadML() {
                 console.log(JSON.stringify(name));
 
 
-                var href = "http://www.plants-recognizer.gq/result?id=" + classIndex[0] + "&prob=" + probability;
+                var href = "http://www.plants-recognizer.gq/result?id=" + classIndex[0] + "&prob=" + probability[0];
                 //console.log('location: ' + href);
                 await redirect(href)
             }
@@ -72,7 +82,7 @@ async function redirect(url) {
     }
 }
 
-//loadML();
+loadML();
 
 /*
 async function dbConn(arr) {

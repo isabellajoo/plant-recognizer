@@ -54,7 +54,7 @@
                                 <div class="progress">
                                     <div class="progress-value" style="width:<%= progress %>%"></div>
                                 </div>
-                                <p class="progress-txt"><%= progress %>% 일치</p>
+                                <p class="progress-txt"><%= progress %>%</p>
                             </div>
                         </div>
                     </div>
@@ -63,13 +63,13 @@
 
             <div id="result-others">
                 <!-- previous buttons -->
-                <a id="scroll-up">&#10094;</a>
+                <a id="scroll-up">&and;</a>
                 <!-- result others -->
                 <div id="scroll-container" class="scroll">
                     <%- include('resultOther') %>
                 </div>
                 <!-- next buttons -->
-                <a id="scroll-down">&#10095;</a>
+                <a id="scroll-down">&or;</a>
             </div>
         </div>
     </body>
@@ -79,21 +79,43 @@
                 document.getElementById('img-search').src = window.localStorage.getItem("imgcropped");
             }
 
+            var resName = document.getElementsByClassName('result-name')[0].innerText;
+            var imgResult = document.getElementsByClassName('img-result');
+            for (var i = 0; i < 5; i++) {
+                imgResult[i].src = "image/" + resName + " 식물/google_000"+ i +".jpg"
+            }
+
             if (localStorage.getItem("resultName") !== null) {
-                var imgResult = document.getElementsByClassName('img-result');
                 var imgOther = document.getElementsByClassName('img-other-result');
+                var resultName = document.getElementsByClassName('result-name');
                 var array = JSON.parse(localStorage.getItem("resultName"));
-                console.log(array);
-                for (var i = 0; i < 5; i++) {
-                    imgResult[i].src = "image/" + array[0] + " 식물/google_000"+ i +".jpg"
-                }
 
                 for (var i = 1; i < array.length; i++) {
-                    console.log("\"image/" + array[i] + " 식물/google_0000\"");
+                    resultName[i].innerHTML = array[i];
                     imgOther[i - 1].src = "image/" + array[i] + " 식물/google_0000.jpg";
-
                 }
-            };
+            }
+
+            if (localStorage.getItem("classIndex") !== null && localStorage.getItem("probability") !== null) {
+                var resultHREF = document.getElementsByClassName('result-other-href');
+                var arrayIndex = JSON.parse(localStorage.getItem("classIndex"));
+                var arrayProb = JSON.parse(localStorage.getItem("probability"));
+                for (var i = 1; i < arrayIndex.length; i++) {
+                    resultHREF[i - 1].setAttribute('href', '/result?id=' + arrayIndex[i] + '&prob=' + arrayProb[i]);
+                }
+            }
+
+            /*
+            if (localStorage.getItem("probability") !== null) {
+                var progress = document.getElementsByClassName('progress-txt-other');
+                var array = JSON.parse(localStorage.getItem("probability"));
+                console.log(array);
+
+                for (var i = 0; i < array.length; i++) {
+                    progress[i].innerHTML = array[i + 1];
+                }
+            }
+            */
         });
     </script>
 

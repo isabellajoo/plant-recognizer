@@ -61,7 +61,6 @@ app.get('/result', function(req, res){
             }
             console.log(rows);
             res.render('result', {
-                result_len: 10,
                 progress: prog,
                 data: rows,
             });
