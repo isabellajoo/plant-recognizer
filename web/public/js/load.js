@@ -50,7 +50,7 @@ async function loadML() {
                 console.log(JSON.stringify(name));
 
 
-                var href = "http://www.plants-recognizer.gq/result?id=" + classIndex[0] + "&prob=" + probability[0] + "&result=" + probability.length;
+                var href = "/result?id=" + classIndex[0] + "&prob=" + probability[0] + "&result=" + probability.length;
                 //console.log('location: ' + href);
                 await redirect(href)
             }
