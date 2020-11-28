@@ -49,8 +49,7 @@ async function loadML() {
                 localStorage.setItem("resultName", JSON.stringify(name));
                 console.log(JSON.stringify(name));
 
-
-                var href = "/result?id=" + classIndex[0] + "&prob=" + probability[0] + "&result=" + probability.length;
+                var href = window.location.protocol + "//" + window.location.host + "/result?id=" + classIndex[0] + "&prob=" + probability[0] + "&result=" + probability.length;
                 //console.log('location: ' + href);
                 await redirect(href)
             }
